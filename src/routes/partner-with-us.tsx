@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Factory, Send, Store, CheckCircle2 } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { Button } from "@/components/ui/button";
-import { openWhatsApp } from "@/lib/site-content";
+import { openEmail } from "@/lib/site-content";
 
 export const Route = createFileRoute("/partner-with-us")({
   validateSearch: (search: Record<string, unknown>): { partner?: "manufacturer" } =>
@@ -58,7 +58,7 @@ function RegForm({ fields, subject }: { fields: Field[]; subject: string }) {
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     const body = fields.map((f) => `${f.l}: ${(v[f.k] ?? "").trim()}`).join("\n");
-    openWhatsApp(`Hello Rishishwar Industry, ${subject}\n\n${body}`);
+    openEmail(`Hello Rishishwar Industry, ${subject}\n\n${body}`, subject);
     setDone(true);
   };
   return (
@@ -83,7 +83,7 @@ function RegForm({ fields, subject }: { fields: Field[]; subject: string }) {
       })}
       <div className="sm:col-span-2">
         <Button type="submit" size="lg" className="h-12 w-full">Submit Registration <Send aria-hidden="true" /></Button>
-         {done && <p className="mt-3 flex items-center gap-2 text-sm text-primary"><CheckCircle2 className="size-4" /> WhatsApp khul gaya hai — message send karke registration complete karein.</p>}
+         {done && <p className="mt-3 flex items-center gap-2 text-sm text-primary"><CheckCircle2 className="size-4" /> Email app khul gaya hai — message send karke registration complete karein.</p>}
       </div>
     </form>
   );

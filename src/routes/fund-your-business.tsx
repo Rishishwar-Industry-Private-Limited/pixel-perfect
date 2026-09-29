@@ -27,7 +27,7 @@ import fundWorkingCapital from "@/assets/fund-working-capital.jpg";
 import fundExpansion from "@/assets/fund-expansion.jpg";
 import fundWelder from "@/assets/fund-welder-clean.jpg";
 import fundIndia from "@/assets/fund-india.jpg";
-import { openWhatsApp } from "@/lib/site-content";
+import { openEmail } from "@/lib/site-content";
 
 export const Route = createFileRoute("/fund-your-business")({
   head: () => ({
@@ -176,7 +176,7 @@ function FundingForm() {
       `GST / Registration Details: ${v["gst"] ?? ""}`,
       `Message: ${v["message"] ?? ""}`,
     ].join("\n");
-    openWhatsApp(`Hello Rishishwar Industry, Business Funding Requirement — ${v["company"] || v["founder"] || "New Enquiry"}\n\n${body}`);
+    openEmail(`Hello Rishishwar Industry, Business Funding Requirement — ${v["company"] || v["founder"] || "New Enquiry"}\n\n${body}`, "Business Funding Requirement");
     setDone(true);
   };
 
@@ -288,7 +288,7 @@ function FundingForm() {
         </Button>
         {done && (
           <p className="mt-3 flex items-center gap-2 text-sm text-primary">
-             <CheckCircle2 className="size-4" /> WhatsApp khul gaya hai — message send karke enquiry complete karein.
+             <CheckCircle2 className="size-4" /> Email app khul gaya hai — message send karke enquiry complete karein.
           </p>
         )}
         <p className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
