@@ -11,7 +11,7 @@ import shipAsset from "@/assets/gp-ship.png.asset.json";
 import { stats, channels, bring, steps } from "./content";
 
 
-export function Section1() {
+export function HeroSection() {
   return (
     <>
         <section className="dark-surface relative isolate flex min-h-[650px] items-end overflow-hidden border-b border-border sm:min-h-[700px]">
@@ -37,7 +37,7 @@ export function Section1() {
   );
 }
 
-export function Section2() {
+export function ChannelsSection() {
   return (
     <>
         <section className="cinematic-section">
@@ -62,7 +62,7 @@ export function Section2() {
   );
 }
 
-export function Section3() {
+export function HowItWorksSection() {
   return (
     <>
         <section className="cinematic-section border-y border-border bg-secondary">
@@ -94,7 +94,7 @@ export function Section3() {
   );
 }
 
-export function Section4() {
+export function CtaSection() {
   return (
     <>
         <section className="dark-surface relative isolate overflow-hidden bg-ink py-24 text-ink-foreground sm:py-32">

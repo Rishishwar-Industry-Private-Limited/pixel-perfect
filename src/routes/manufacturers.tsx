@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
-import { Section1, Section2, Section3, Section4 } from "@/features/manufacturers/sections";
+import { HeroSection, ChannelsSection, HowItWorksSection, CtaSection } from "@/features/manufacturers/sections";
 
 export const Route = createFileRoute("/manufacturers")({
   head: () => ({ meta: [
@@ -19,10 +19,10 @@ function ManufacturersPage() {
     <div className="min-h-screen bg-background">
       <SiteHeader />
       <main>
-        <Section1 />
-        <Section2 />
-        <Section3 />
-        <Section4 />
+        <HeroSection />
+        <ChannelsSection />
+        <HowItWorksSection />
+        <CtaSection />
       </main>
       <SiteFooter />
     </div>

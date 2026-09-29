@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
-import { Section1, Section2, Section3 } from "@/features/retailer-partner/sections";
+import { HeroSection, HighlightsSection, CalculatorSection } from "@/features/retailer-partner/sections";
 
 export const Route = createFileRoute("/retailer-partner")({
   head: () => ({
@@ -22,9 +22,9 @@ function RetailerPartnerPage() {
     <div className="min-h-screen bg-background">
       <SiteHeader />
       <main>
-        <Section1 />
-        <Section2 />
-        <Section3 />
+        <HeroSection />
+        <HighlightsSection />
+        <CalculatorSection />
       </main>
       <SiteFooter />
     </div>

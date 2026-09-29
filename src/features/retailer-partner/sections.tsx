@@ -7,7 +7,7 @@ import storeImage from "@/assets/retailer-store.png.asset.json";
 
 
 
-export function Section1() {
+export function HeroSection() {
   return (
     <>
         <section className="border-b border-border bg-ink py-6 text-ink-foreground">
@@ -24,7 +24,7 @@ export function Section1() {
   );
 }
 
-export function Section2() {
+export function HighlightsSection() {
   return (
     <>
         <section id="calculator" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
@@ -40,7 +40,7 @@ export function Section2() {
   );
 }
 
-export function Section3() {
+export function CalculatorSection() {
   return (
     <>
         <section className="bg-ink px-4 py-12 text-ink-foreground sm:px-6">
