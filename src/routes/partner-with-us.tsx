@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 import { openWhatsApp } from "@/lib/site-content";
 
 export const Route = createFileRoute("/partner-with-us")({
-  validateSearch: (search: Record<string, unknown>) => ({ partner: search.partner === "manufacturer" ? "manufacturer" : undefined }),
+  validateSearch: (search: Record<string, unknown>): { partner?: "manufacturer" } =>
+    search["partner"] === "manufacturer" ? { partner: "manufacturer" } : {},
   head: () => ({
     meta: [
       { title: "Partner With Us — Retail Store & Manufacturer Registration | Rishishwar Industry" },
