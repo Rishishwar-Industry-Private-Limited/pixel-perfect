@@ -1,9 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
-import { CheckCircle2, Mail, Send } from "lucide-react";
+import { Mail } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
-import { Button } from "@/components/ui/button";
-import { openEmail } from "@/lib/site-content";
+import { EmailForm } from "@/components/forms/email-form";
+import { contactFields } from "@/content/forms";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -43,7 +42,6 @@ const contactCards = [
 ];
 
 function ContactPage() {
-  const [sent, setSent] = useState(false);
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
@@ -101,66 +99,10 @@ function ContactPage() {
               })}
             </div>
 
-            <form
-              className="rounded-sm border bg-card p-6 sm:p-8"
-              onSubmit={(e) => {
-                e.preventDefault();
-                const data = new FormData(e.currentTarget);
-                const body = `Hello Rishishwar Industry, I would like to discuss a partnership.\n\nName: ${String(data.get("name") ?? "")}\nCompany: ${String(
-                    data.get("company") ?? ""
-                  )}\nPhone: ${String(data.get("phone") ?? "")}\n\n${String(
-                    data.get("message") ?? ""
-                  )}`;
-                openEmail(body, "Partnership Enquiry");
-                setSent(true);
-              }}
-            >
-              <h2 className="text-2xl">Send Us a Message</h2>
-              <div className="mt-6 grid gap-5 sm:grid-cols-2">
-                <label className="block">
-                  <span className="text-sm font-medium">Your Name</span>
-                  <input
-                    required
-                    name="name"
-                    className="mt-1.5 w-full rounded-sm border bg-background px-4 py-3 text-sm outline-none focus:border-primary"
-                    placeholder="Full name"
-                  />
-                </label>
-                <label className="block">
-                  <span className="text-sm font-medium">Company</span>
-                  <input
-                    name="company"
-                    className="mt-1.5 w-full rounded-sm border bg-background px-4 py-3 text-sm outline-none focus:border-primary"
-                    placeholder="Company name"
-                  />
-                </label>
-                <label className="block sm:col-span-2">
-                  <span className="text-sm font-medium">Phone</span>
-                  <input
-                    name="phone"
-                    type="tel"
-                    required
-                    pattern="[0-9+ ]{10,15}"
-                    maxLength={15}
-                    className="mt-1.5 w-full rounded-sm border bg-background px-4 py-3 text-sm outline-none focus:border-primary"
-                    placeholder="+91 ..."
-                  />
-                </label>
-                <label className="block sm:col-span-2">
-                  <span className="text-sm font-medium">Message</span>
-                  <textarea
-                    required
-                    name="message"
-                    rows={5}
-                    maxLength={1000}
-                    className="mt-1.5 w-full rounded-sm border bg-background px-4 py-3 text-sm outline-none focus:border-primary"
-                    placeholder="Tell us about your products and the markets you want to reach."
-                  />
-                </label>
-              </div>
-              <Button type="submit" size="lg" className="mt-6">Send via Email <Send /></Button>
-              {sent && <p className="mt-4 flex items-center gap-2 text-sm text-primary"><CheckCircle2 className="size-4" /> Email app khul gaya hai — message send karke enquiry complete karein.</p>}
-            </form>
+            <div className="rounded-sm border bg-card p-6 sm:p-8">
+              <h2 className="mb-6 text-2xl">Send Us a Message</h2>
+              <EmailForm fields={contactFields} subject="Partnership Enquiry" intro="I would like to discuss a partnership." submitLabel="Send via Email" successText="Email app khul gaya hai — message send karke enquiry complete karein." />
+            </div>
           </div>
         </section>
       </main>

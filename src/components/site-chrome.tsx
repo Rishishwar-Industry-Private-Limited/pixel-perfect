@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Globe2, Mail, Menu, Moon, Sun, X } from "lucide-react";
 import logoAsset from "@/assets/rishishwar-logo.png.asset.json";
 import { Button } from "@/components/ui/button";
-import { COMPANY } from "@/lib/site-content";
+import { COMPANY } from "@/content/company";
 
 export const navLinks = [
   { to: "/", label: "Home" },
