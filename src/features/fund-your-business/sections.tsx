@@ -27,7 +27,7 @@ import fundWorkingCapital from "@/assets/fund-working-capital.jpg";
 import fundExpansion from "@/assets/fund-expansion.jpg";
 import fundWelder from "@/assets/fund-welder-clean.jpg";
 import fundIndia from "@/assets/fund-india.jpg";
-import { openEmail } from "@/lib/site-content";
+import { openEmail } from "@/content/company";
 
 import { futurePoints, heroStrip, fundingNeeds, whoCanApply, processSteps, impactTiles, categoryOptions, turnoverOptions, amountOptions, loanOptions, inputCls, allStates } from "./content";
 

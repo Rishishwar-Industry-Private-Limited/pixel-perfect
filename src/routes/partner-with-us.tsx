@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Factory, Send, Store, CheckCircle2 } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { Button } from "@/components/ui/button";
-import { openEmail } from "@/lib/site-content";
+import { openEmail } from "@/content/company";
 
 export const Route = createFileRoute("/partner-with-us")({
   validateSearch: (search: Record<string, unknown>): { partner?: "manufacturer" } =>

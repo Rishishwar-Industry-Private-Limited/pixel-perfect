@@ -3,7 +3,7 @@ import { useState } from "react";
 import { CheckCircle2, Send } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { Button } from "@/components/ui/button";
-import { openEmail } from "@/lib/site-content";
+import { openEmail } from "@/content/company";
 
 export const Route = createFileRoute("/register-your-store")({
   head: () => ({
