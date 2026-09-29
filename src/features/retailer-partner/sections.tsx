@@ -10,6 +10,36 @@ import storeImage from "@/assets/retailer-store.png.asset.json";
 export function HeroSection() {
   return (
     <>
+        <section className="dark-surface relative isolate flex min-h-[540px] items-center overflow-hidden sm:min-h-[590px]">
+          <img src={storeImage.url} alt="Rishishwar Industry retailer in a well-stocked grocery store" className="absolute inset-0 -z-20 size-full object-cover object-[58%_center]" />
+          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/90 to-ink/20 max-md:bg-gradient-to-t max-md:from-ink max-md:via-ink/75 max-md:to-ink/10" />
+          <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6">
+            <div className="max-w-xl">
+              <p className="text-sm font-bold uppercase text-primary">Rishishwar Industry · Retailer Partnership</p>
+              <h1 className="mt-5 text-4xl leading-tight sm:text-5xl lg:text-6xl">Retailer Partner Bane. <span className="text-primary">Zyada Kamaye.</span></h1>
+              <p className="mt-5 max-w-md text-base leading-relaxed text-ink-foreground/85 sm:text-lg">Apni shop ko Rishishwar Industry ke saath jodiye aur apni location aur store area ke hisab se approximate monthly rent ki opportunity paaiye.</p>
+              <Button asChild size="lg" className="mt-7 h-auto min-h-11 whitespace-normal px-6 py-3 text-center">
+                <Link to="/register-your-store">Register Your Store With Us <ArrowRight aria-hidden="true" /></Link>
+              </Button>
+              <div className="mt-10 grid max-w-lg grid-cols-2 gap-5 border-t border-ink-foreground/20 pt-6 text-sm sm:grid-cols-4">
+                {[
+                  { icon: BadgeIndianRupee, text: "Approx. Rent Opportunity" },
+                  { icon: Store, text: "Area-Based Calculation" },
+                  { icon: Boxes, text: "Quality Products" },
+                  { icon: Users, text: "Long-Term Partnership" },
+                ].map(({ icon: Icon, text }) => <div key={text}><Icon className="mb-2 size-6 text-primary" aria-hidden="true" /><span className="leading-tight text-ink-foreground/90">{text}</span></div>)}
+              </div>
+
+            </div>
+          </div>
+        </section>
+    </>
+  );
+}
+
+export function HighlightsSection() {
+  return (
+    <>
         <section className="border-b border-border bg-ink py-6 text-ink-foreground">
           <div className="mx-auto grid max-w-7xl gap-5 px-4 sm:grid-cols-3 sm:px-6">
             {[
@@ -24,7 +54,7 @@ export function HeroSection() {
   );
 }
 
-export function HighlightsSection() {
+export function CalculatorSection() {
   return (
     <>
         <section id="calculator" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
@@ -40,7 +70,7 @@ export function HighlightsSection() {
   );
 }
 
-export function CalculatorSection() {
+export function CtaSection() {
   return (
     <>
         <section className="bg-ink px-4 py-12 text-ink-foreground sm:px-6">

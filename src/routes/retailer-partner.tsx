@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
-import { HeroSection, HighlightsSection, CalculatorSection } from "@/features/retailer-partner/sections";
+import { HeroSection, HighlightsSection, CalculatorSection, CtaSection } from "@/features/retailer-partner/sections";
 
 export const Route = createFileRoute("/retailer-partner")({
   head: () => ({
@@ -25,6 +25,7 @@ function RetailerPartnerPage() {
         <HeroSection />
         <HighlightsSection />
         <CalculatorSection />
+        <CtaSection />
       </main>
       <SiteFooter />
     </div>
