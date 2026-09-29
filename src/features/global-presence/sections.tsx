@@ -118,18 +118,20 @@ export function CountriesSection() {
                 key={c.name}
                  className="group overflow-hidden rounded-sm border border-border bg-card card-lift"
               >
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <img
-                    src={c.img.url}
-                    alt={c.name}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                   <span className="absolute -bottom-5 left-4 flex size-11 items-center justify-center rounded-full border-2 border-card bg-card text-2xl shadow-md">
+                <div className="relative aspect-[16/10]">
+                  <div className="size-full overflow-hidden">
+                    <img
+                      src={c.img.url}
+                      alt={c.name}
+                      loading="lazy"
+                      className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <span className="absolute -bottom-6 left-4 flex size-12 shrink-0 items-center justify-center rounded-full border-2 border-card bg-card text-2xl leading-none shadow-md" aria-label={`${c.name} flag`}>
                     {c.flag}
                   </span>
                 </div>
-                <div className="flex items-start justify-between gap-3 p-4 pt-7">
+                <div className="flex items-start justify-between gap-3 p-4 pt-9">
                   <div>
                     <h3 className="font-display text-base font-bold">{c.name}</h3>
                      <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">
