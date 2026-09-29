@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Check, Phone } from "lucide-react";
+import { ArrowRight, Check, Mail } from "lucide-react";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { Button } from "@/components/ui/button";
 import productionImage from "@/assets/manufacturer-floor.jpg";
@@ -11,7 +11,7 @@ import shipAsset from "@/assets/gp-ship.png.asset.json";
 export const Route = createFileRoute("/manufacturers")({
   head: () => ({ meta: [
     { title: "For Manufacturers — FMCG Market Access | Rishishwar Industry" },
-    { name: "description", content: "Retail shelf space, distributor connections, new Indian cities and export routes for FMCG manufacturers — with Rishishwar Industry, Gwalior." },
+    { name: "description", content: "Retail shelf space, distributor connections, new Indian cities and export routes for FMCG manufacturers — with Rishishwar Industry." },
     { property: "og:title", content: "For Manufacturers — Rishishwar Industry" },
     { property: "og:description", content: "Take your FMCG products from the production floor to 2,000+ retail stores and 8 countries." },
     { property: "og:type", content: "website" },
@@ -35,12 +35,12 @@ const channels = [
 const bring = [
   "Product list with MRP and trade margins",
   "Monthly production capacity",
-  "FSSAI / BIS or other licences you hold",
+  "Licences and certifications you hold",
   "The cities or countries you want to reach",
 ];
 
 const steps = [
-  { title: "A first call", body: "We learn about your products, pricing and capacity. Usually 30 minutes." },
+  { title: "A first call", body: "We learn about your products, pricing and capacity." },
   { title: "A market plan", body: "We suggest which stores, distributors or countries make sense — and which don't." },
   { title: "Launch and follow-up", body: "Products reach the shelf, and we stay in touch on sell-through and reorders." },
 ];
@@ -57,10 +57,10 @@ function ManufacturersPage() {
           <div className="page-shell w-full pb-14 pt-28">
             <p className="royal-label">For FMCG manufacturers</p>
             <h1 className="mt-6 max-w-3xl text-5xl leading-[1.02] sm:text-6xl lg:text-7xl">You make the product. <span className="text-accent-foreground">We get it sold.</span></h1>
-            <p className="mt-6 max-w-xl text-base leading-8 text-ink-foreground/80 sm:text-lg">Rishishwar Industry places FMCG brands in retail stores, connects them with distributors, and opens export routes — from our base in Gwalior.</p>
+            <p className="mt-6 max-w-xl text-base leading-8 text-ink-foreground/80 sm:text-lg">Rishishwar Industry places FMCG brands in retail stores, connects them with distributors, and opens export routes across India and international markets.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg"><Link to="/partner-with-us" search={{ partner: "manufacturer" }}>Register as a manufacturer <ArrowRight aria-hidden="true" /></Link></Button>
-              <Button asChild size="lg" variant="outline" className="border-ink-foreground/40 text-ink-foreground"><a href="tel:+917566072349"><Phone aria-hidden="true" /> +91 75660 72349</a></Button>
+              <Button asChild size="lg" variant="outline" className="border-ink-foreground/40 text-ink-foreground"><a href="mailto:info@rishishwarindustry.com"><Mail aria-hidden="true" /> info@rishishwarindustry.com</a></Button>
             </div>
             <dl className="mt-14 grid max-w-2xl grid-cols-3 border-t border-ink-foreground/20 pt-6">
               {stats.map((s) => (
@@ -110,7 +110,7 @@ function ManufacturersPage() {
                   <li key={b} className="flex gap-3 text-muted-foreground"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden="true" />{b}</li>
                 ))}
               </ul>
-              <p className="mt-8 border-t border-border pt-6 text-sm leading-6 text-muted-foreground">Don't have everything yet? That's fine — call us anyway and we'll work it out together.</p>
+              <p className="mt-8 border-t border-border pt-6 text-sm leading-6 text-muted-foreground">Don't have everything yet? That's fine — write to us anyway and we'll work it out together.</p>
             </div>
           </div>
         </section>
@@ -120,7 +120,7 @@ function ManufacturersPage() {
           <div className="hero-overlay absolute inset-0 -z-10" />
           <div className="page-shell"><div className="max-w-3xl">
             <h2 className="text-4xl sm:text-6xl">Tell us what you make.</h2>
-            <p className="mt-6 max-w-xl leading-8 text-ink-foreground/80">Fill in a short form and our team will call you back within two working days.</p>
+            <p className="mt-6 max-w-xl leading-8 text-ink-foreground/80">Fill in a short form and our team will get back to you.</p>
             <Button asChild size="lg" className="mt-9"><Link to="/partner-with-us" search={{ partner: "manufacturer" }}>Manufacturer registration <ArrowRight aria-hidden="true" /></Link></Button>
           </div></div>
         </section>

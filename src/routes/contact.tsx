@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { CheckCircle2, Phone, Mail, MapPin, Send } from "lucide-react";
+import { CheckCircle2, Mail, Send } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { Button } from "@/components/ui/button";
-import { openWhatsApp } from "@/lib/site-content";
+import { openEmail } from "@/lib/site-content";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Partner with Rishishwar Industry for FMCG market access. Call +91 75660 72349 or write to info@rishishwarindustry.com — Gwalior, Madhya Pradesh, India.",
+          "Partner with Rishishwar Industry for FMCG market access. Write to info@rishishwarindustry.com and our team will get back to you.",
       },
       {
         property: "og:title",
@@ -35,21 +35,10 @@ export const Route = createFileRoute("/contact")({
 
 const contactCards = [
   {
-    icon: Phone,
-    title: "Call Us",
-    value: "+91 75660 72349",
-    href: "tel:+917566072349",
-  },
-  {
     icon: Mail,
     title: "Email Us",
     value: "info@rishishwarindustry.com",
     href: "mailto:info@rishishwarindustry.com",
-  },
-  {
-    icon: MapPin,
-    title: "Visit Us",
-    value: "Gwalior, Madhya Pradesh, India",
   },
 ];
 
@@ -122,7 +111,7 @@ function ContactPage() {
                   )}\nPhone: ${String(data.get("phone") ?? "")}\n\n${String(
                     data.get("message") ?? ""
                   )}`;
-                openWhatsApp(body);
+                openEmail(body, "Partnership Enquiry");
                 setSent(true);
               }}
             >
@@ -169,8 +158,8 @@ function ContactPage() {
                   />
                 </label>
               </div>
-              <Button type="submit" size="lg" className="mt-6">Continue on WhatsApp <Send /></Button>
-              {sent && <p className="mt-4 flex items-center gap-2 text-sm text-primary"><CheckCircle2 className="size-4" /> WhatsApp khul gaya hai — message send karke enquiry complete karein.</p>}
+              <Button type="submit" size="lg" className="mt-6">Send via Email <Send /></Button>
+              {sent && <p className="mt-4 flex items-center gap-2 text-sm text-primary"><CheckCircle2 className="size-4" /> Email app khul gaya hai — message send karke enquiry complete karein.</p>}
             </form>
           </div>
         </section>

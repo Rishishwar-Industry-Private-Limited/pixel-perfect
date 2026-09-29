@@ -3,7 +3,7 @@ import { useState } from "react";
 import { CheckCircle2, Send } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { Button } from "@/components/ui/button";
-import { openWhatsApp } from "@/lib/site-content";
+import { openEmail } from "@/lib/site-content";
 
 export const Route = createFileRoute("/register-your-store")({
   head: () => ({
@@ -27,7 +27,7 @@ function RegisterPage() {
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     const body = fields.map(([k, l]) => `${l}: ${v[k] ?? ""}`).join("\n");
-    openWhatsApp(`Hello Rishishwar Industry, I want to register my store.\n\n${body}`);
+    openEmail(`Hello Rishishwar Industry, I want to register my store.\n\n${body}`, "Store Registration");
     setDone(true);
   };
   return (
@@ -44,7 +44,7 @@ function RegisterPage() {
             </label>
           ))}
           <Button type="submit" size="lg" className="h-12 w-full">Submit Registration <Send aria-hidden="true" /></Button>
-           {done && <p className="flex items-center gap-2 text-sm text-primary"><CheckCircle2 className="size-4" /> WhatsApp khul gaya hai — message send karke registration complete karein.</p>}
+           {done && <p className="flex items-center gap-2 text-sm text-primary"><CheckCircle2 className="size-4" /> Email app khul gaya hai — message send karke registration complete karein.</p>}
         </form>
       </main>
       <SiteFooter />
