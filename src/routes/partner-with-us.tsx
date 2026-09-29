@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Factory, Send, Store, CheckCircle2 } from "lucide-react";
+import { Factory, Store } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { Button } from "@/components/ui/button";
-import { openEmail } from "@/content/company";
+import { EmailForm } from "@/components/forms/email-form";
+import { mfgFields, retailFields } from "@/content/forms";
 
 export const Route = createFileRoute("/partner-with-us")({
   validateSearch: (search: Record<string, unknown>): { partner?: "manufacturer" } =>
@@ -20,74 +21,6 @@ export const Route = createFileRoute("/partner-with-us")({
   }),
   component: PartnerPage,
 });
-
-type Field = { k: string; l: string; t: "text" | "tel" | "email" | "number" | "select" | "textarea"; opts?: string[]; optional?: boolean };
-
-const retailFields: Field[] = [
-  { k: "owner", l: "Owner Name", t: "text" },
-  { k: "phone", l: "Mobile Number", t: "tel" },
-  { k: "email", l: "Email", t: "email", optional: true },
-  { k: "store", l: "Store Name", t: "text" },
-  { k: "type", l: "Store Type", t: "select", opts: ["Kirana / General Store", "Supermarket", "Medical Store", "Cosmetic Store", "Other"] },
-  { k: "state", l: "State", t: "text" },
-  { k: "city", l: "District / City / Town", t: "text" },
-  { k: "address", l: "Full Store Address", t: "textarea" },
-  { k: "area", l: "Store Area (sq.ft.)", t: "number" },
-  { k: "gst", l: "GST Number", t: "text", optional: true },
-];
-
-const mfgFields: Field[] = [
-  { k: "company", l: "Company Name", t: "text" },
-  { k: "contact", l: "Contact Person", t: "text" },
-  { k: "designation", l: "Designation", t: "text", optional: true },
-  { k: "phone", l: "Mobile Number", t: "tel" },
-  { k: "email", l: "Business Email", t: "email" },
-  { k: "category", l: "Product Category", t: "select", opts: ["Food & Beverages", "Personal Care", "Home Care", "Health & Wellness", "Packaged Snacks", "Other"] },
-  { k: "brands", l: "Brand Names", t: "text" },
-  { k: "location", l: "Factory Location (City, State)", t: "text" },
-  { k: "markets", l: "Target Markets", t: "select", opts: ["Domestic (India)", "International", "Both"] },
-  { k: "gst", l: "GST Number", t: "text", optional: true },
-  { k: "message", l: "About Your Products / Requirement", t: "textarea", optional: true },
-];
-
-const inputCls = "mt-2 w-full rounded-md border border-input bg-background px-4 text-base outline-none focus:border-primary focus:ring-1 focus:ring-primary";
-
-function RegForm({ fields, subject }: { fields: Field[]; subject: string }) {
-  const [v, setV] = useState<Record<string, string>>({});
-  const [done, setDone] = useState(false);
-  const submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const body = fields.map((f) => `${f.l}: ${(v[f.k] ?? "").trim()}`).join("\n");
-    openEmail(`Hello Rishishwar Industry, ${subject}\n\n${body}`, subject);
-    setDone(true);
-  };
-  return (
-    <form onSubmit={submit} className="grid gap-5 sm:grid-cols-2">
-      {fields.map((f) => {
-        const common = { required: !f.optional, value: v[f.k] ?? "", onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => setV({ ...v, [f.k]: e.target.value }) };
-        return (
-          <label key={f.k} className={`block text-sm font-semibold ${f.t === "textarea" ? "sm:col-span-2" : ""}`}>
-            {f.l} {f.optional ? <span className="font-normal text-muted-foreground">(optional)</span> : <span className="text-primary">*</span>}
-            {f.t === "select" ? (
-              <select {...common} className={`${inputCls} h-12`}>
-                <option value="">Select…</option>
-                {f.opts!.map((o) => <option key={o}>{o}</option>)}
-              </select>
-            ) : f.t === "textarea" ? (
-              <textarea {...common} maxLength={1000} rows={3} className={`${inputCls} py-3`} />
-            ) : (
-              <input {...common} type={f.t} maxLength={f.t === "tel" ? 15 : 150} pattern={f.t === "tel" ? "[0-9+ ]{10,15}" : undefined} min={f.t === "number" ? 1 : undefined} className={`${inputCls} h-12`} />
-            )}
-          </label>
-        );
-      })}
-      <div className="sm:col-span-2">
-        <Button type="submit" size="lg" className="h-12 w-full">Submit Registration <Send aria-hidden="true" /></Button>
-         {done && <p className="mt-3 flex items-center gap-2 text-sm text-primary"><CheckCircle2 className="size-4" /> Email app khul gaya hai — message send karke registration complete karein.</p>}
-      </div>
-    </form>
-  );
-}
 
 function PartnerPage() {
   const { partner } = Route.useSearch();
@@ -120,8 +53,8 @@ function PartnerPage() {
            <div id="partner-panel" role="tabpanel" aria-labelledby={`${tab}-tab`} className="mt-8 rounded-sm border border-border bg-card p-5 sm:p-8">
             <h2 className="mb-6 text-2xl">{tab === "retail" ? "Retail Store Registration Form" : "Manufacturer Registration Form"}</h2>
             {tab === "retail"
-              ? <RegForm key="r" fields={retailFields} subject="Retail Store Partner Registration" />
-              : <RegForm key="m" fields={mfgFields} subject="Manufacturer Partner Registration" />}
+              ? <EmailForm key="r" fields={retailFields} subject="Retail Store Partner Registration" intro="Retail Store Partner Registration" />
+              : <EmailForm key="m" fields={mfgFields} subject="Manufacturer Partner Registration" intro="Manufacturer Partner Registration" />}
           </div>
         </section>
       </main>
