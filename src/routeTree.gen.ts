@@ -10,33 +10,154 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as FundYourBusinessRouteImport } from './routes/fund-your-business'
+import { Route as GlobalPresenceRouteImport } from './routes/global-presence'
+import { Route as ManufacturersRouteImport } from './routes/manufacturers'
+import { Route as OurServicesRouteImport } from './routes/our-services'
+import { Route as PartnerWithUsRouteImport } from './routes/partner-with-us'
+import { Route as RegisterYourStoreRouteImport } from './routes/register-your-store'
+import { Route as RetailerPartnerRouteImport } from './routes/retailer-partner'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FundYourBusinessRoute = FundYourBusinessRouteImport.update({
+  id: '/fund-your-business',
+  path: '/fund-your-business',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GlobalPresenceRoute = GlobalPresenceRouteImport.update({
+  id: '/global-presence',
+  path: '/global-presence',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ManufacturersRoute = ManufacturersRouteImport.update({
+  id: '/manufacturers',
+  path: '/manufacturers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurServicesRoute = OurServicesRouteImport.update({
+  id: '/our-services',
+  path: '/our-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnerWithUsRoute = PartnerWithUsRouteImport.update({
+  id: '/partner-with-us',
+  path: '/partner-with-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegisterYourStoreRoute = RegisterYourStoreRouteImport.update({
+  id: '/register-your-store',
+  path: '/register-your-store',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RetailerPartnerRoute = RetailerPartnerRouteImport.update({
+  id: '/retailer-partner',
+  path: '/retailer-partner',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/fund-your-business': typeof FundYourBusinessRoute
+  '/global-presence': typeof GlobalPresenceRoute
+  '/manufacturers': typeof ManufacturersRoute
+  '/our-services': typeof OurServicesRoute
+  '/partner-with-us': typeof PartnerWithUsRoute
+  '/register-your-store': typeof RegisterYourStoreRoute
+  '/retailer-partner': typeof RetailerPartnerRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/fund-your-business': typeof FundYourBusinessRoute
+  '/global-presence': typeof GlobalPresenceRoute
+  '/manufacturers': typeof ManufacturersRoute
+  '/our-services': typeof OurServicesRoute
+  '/partner-with-us': typeof PartnerWithUsRoute
+  '/register-your-store': typeof RegisterYourStoreRoute
+  '/retailer-partner': typeof RetailerPartnerRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/fund-your-business': typeof FundYourBusinessRoute
+  '/global-presence': typeof GlobalPresenceRoute
+  '/manufacturers': typeof ManufacturersRoute
+  '/our-services': typeof OurServicesRoute
+  '/partner-with-us': typeof PartnerWithUsRoute
+  '/register-your-store': typeof RegisterYourStoreRoute
+  '/retailer-partner': typeof RetailerPartnerRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/fund-your-business'
+    | '/global-presence'
+    | '/manufacturers'
+    | '/our-services'
+    | '/partner-with-us'
+    | '/register-your-store'
+    | '/retailer-partner'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/fund-your-business'
+    | '/global-presence'
+    | '/manufacturers'
+    | '/our-services'
+    | '/partner-with-us'
+    | '/register-your-store'
+    | '/retailer-partner'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/fund-your-business'
+    | '/global-presence'
+    | '/manufacturers'
+    | '/our-services'
+    | '/partner-with-us'
+    | '/register-your-store'
+    | '/retailer-partner'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  FundYourBusinessRoute: typeof FundYourBusinessRoute
+  GlobalPresenceRoute: typeof GlobalPresenceRoute
+  ManufacturersRoute: typeof ManufacturersRoute
+  OurServicesRoute: typeof OurServicesRoute
+  PartnerWithUsRoute: typeof PartnerWithUsRoute
+  RegisterYourStoreRoute: typeof RegisterYourStoreRoute
+  RetailerPartnerRoute: typeof RetailerPartnerRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +169,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fund-your-business': {
+      id: '/fund-your-business'
+      path: '/fund-your-business'
+      fullPath: '/fund-your-business'
+      preLoaderRoute: typeof FundYourBusinessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/global-presence': {
+      id: '/global-presence'
+      path: '/global-presence'
+      fullPath: '/global-presence'
+      preLoaderRoute: typeof GlobalPresenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manufacturers': {
+      id: '/manufacturers'
+      path: '/manufacturers'
+      fullPath: '/manufacturers'
+      preLoaderRoute: typeof ManufacturersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-services': {
+      id: '/our-services'
+      path: '/our-services'
+      fullPath: '/our-services'
+      preLoaderRoute: typeof OurServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partner-with-us': {
+      id: '/partner-with-us'
+      path: '/partner-with-us'
+      fullPath: '/partner-with-us'
+      preLoaderRoute: typeof PartnerWithUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/register-your-store': {
+      id: '/register-your-store'
+      path: '/register-your-store'
+      fullPath: '/register-your-store'
+      preLoaderRoute: typeof RegisterYourStoreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/retailer-partner': {
+      id: '/retailer-partner'
+      path: '/retailer-partner'
+      fullPath: '/retailer-partner'
+      preLoaderRoute: typeof RetailerPartnerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  FundYourBusinessRoute: FundYourBusinessRoute,
+  GlobalPresenceRoute: GlobalPresenceRoute,
+  ManufacturersRoute: ManufacturersRoute,
+  OurServicesRoute: OurServicesRoute,
+  PartnerWithUsRoute: PartnerWithUsRoute,
+  RegisterYourStoreRoute: RegisterYourStoreRoute,
+  RetailerPartnerRoute: RetailerPartnerRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

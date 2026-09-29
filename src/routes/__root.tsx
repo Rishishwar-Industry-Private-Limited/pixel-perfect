@@ -77,21 +77,33 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Rishishwar Industry Pvt. Ltd." },
+      { name: "description", content: "FMCG Sales & Market Expansion" },
+      { name: "author", content: "Rishishwar Industry Private Limited" },
+      { property: "og:title", content: "Rishishwar Industry Pvt. Ltd." },
+      { property: "og:description", content: "FMCG Sales & Market Expansion" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -116,6 +128,29 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  // Recover from stale page chunks (e.g. after an update) by reloading once.
+  useEffect(() => {
+    const onPreloadError = (e: Event) => {
+      const key = "chunk-reload-at";
+      const last = Number(sessionStorage.getItem(key) || 0);
+      if (Date.now() - last < 10000) return;
+      sessionStorage.setItem(key, String(Date.now()));
+      e.preventDefault();
+      window.location.reload();
+    };
+    const onRejection = (e: PromiseRejectionEvent) => {
+      const msg = String(e.reason?.message ?? e.reason ?? "");
+      if (/Failed to fetch dynamically imported module|Importing a module script failed/.test(msg)) onPreloadError(e);
+    };
+    window.addEventListener("vite:preloadError", onPreloadError);
+    window.addEventListener("unhandledrejection", onRejection);
+    return () => {
+      window.removeEventListener("vite:preloadError", onPreloadError);
+      window.removeEventListener("unhandledrejection", onRejection);
+    };
+  }, []);
+
 
   return (
     <QueryClientProvider client={queryClient}>
