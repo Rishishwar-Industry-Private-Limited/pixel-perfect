@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Globe2, Mail, MapPin, Menu, Moon, Phone, Sun, X } from "lucide-react";
+import { Globe2, Mail, Menu, Moon, Sun, X } from "lucide-react";
 import logoAsset from "@/assets/rishishwar-logo.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { COMPANY } from "@/lib/site-content";
@@ -89,9 +89,7 @@ export function SiteFooter() {
         <div>
           <h3 className="text-sm uppercase tracking-wider text-accent-foreground">Contact</h3>
           <ul className="mt-5 space-y-4 text-sm text-ink-foreground/60">
-            <li><a href={`tel:${COMPANY.phone}`} className="flex items-center gap-3 hover:text-primary"><Phone className="size-4 text-primary" />{COMPANY.phoneDisplay}</a></li>
             <li><a href={`mailto:${COMPANY.email}`} className="flex items-start gap-3 break-all hover:text-primary"><Mail className="mt-0.5 size-4 shrink-0 text-primary" />{COMPANY.email}</a></li>
-            <li className="flex items-start gap-3"><MapPin className="mt-0.5 size-4 shrink-0 text-primary" />{COMPANY.location}</li>
           </ul>
         </div>
       </div>
