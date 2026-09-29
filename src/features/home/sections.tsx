@@ -13,9 +13,9 @@ export function HeroSection() {
       <img src={heroBgAsset.url} alt="Rishishwar Industry representative inside an FMCG retail store" className="absolute inset-0 size-full object-cover object-[62%_center]" />
       <div className="hero-overlay-mobile absolute inset-0 md:hidden" /><div className="hero-overlay absolute inset-0 hidden md:block" />
       <div className="page-shell relative flex h-full items-center py-20">
-        <div className="max-w-3xl">
+        <div className="max-w-5xl">
           <p className="royal-label">From Manufacturer to Market</p>
-          <h1 className="mt-7 text-5xl leading-[0.98] sm:text-6xl lg:text-8xl">We Build Markets.<span className="mt-2 block text-accent-foreground">You Grow Your Sales.</span></h1>
+          <h1 className="mt-7 text-5xl leading-[1.04] sm:text-6xl lg:text-7xl"><span className="block">We Build Markets.</span><span className="mt-2 block text-accent-foreground">You Grow Your Sales.</span></h1>
           <p className="mt-7 max-w-xl text-base leading-7 text-ink-foreground/65 sm:text-lg">Rishishwar Industry connects FMCG manufacturers with retail networks, distributors and international opportunities.</p>
           <div className="mt-9 flex flex-wrap gap-4"><Button asChild size="lg"><Link to="/manufacturers">For Manufacturers <ArrowRight /></Link></Button><Button asChild size="lg" variant="outline" className="border-ink-foreground/30 text-ink-foreground"><Link to="/our-services">Explore Services</Link></Button></div>
         </div>
