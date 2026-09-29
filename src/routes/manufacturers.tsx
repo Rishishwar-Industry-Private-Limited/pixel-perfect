@@ -118,11 +118,11 @@ function ManufacturersPage() {
         <section className="dark-surface relative isolate overflow-hidden bg-ink py-24 text-ink-foreground sm:py-32">
           <img src={handshakeImage} alt="" loading="lazy" className="absolute inset-0 -z-20 size-full object-cover" />
           <div className="hero-overlay absolute inset-0 -z-10" />
-          <div className="page-shell max-w-3xl">
+          <div className="page-shell"><div className="max-w-3xl">
             <h2 className="text-4xl sm:text-6xl">Tell us what you make.</h2>
             <p className="mt-6 max-w-xl leading-8 text-ink-foreground/80">Fill in a short form and our team will call you back within two working days.</p>
             <Button asChild size="lg" className="mt-9"><Link to="/partner-with-us" search={{ partner: "manufacturer" }}>Manufacturer registration <ArrowRight aria-hidden="true" /></Link></Button>
-          </div>
+          </div></div>
         </section>
       </main>
       <SiteFooter />
