@@ -3,7 +3,7 @@ import { ArrowRight, BadgeIndianRupee, Boxes, Store, Truck, Users } from "lucide
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { Button } from "@/components/ui/button";
 import { IncomeCalculator } from "@/components/forms/income-calculator";
-import storeImage from "@/assets/retailer-store.png.asset.json";
+import storeImage from "@/assets/retailer-store.webp";
 
 
 
@@ -11,7 +11,7 @@ export function HeroSection() {
   return (
     <>
         <section className="dark-surface relative isolate flex min-h-[540px] items-center overflow-hidden sm:min-h-[590px]">
-          <img src={storeImage.url} alt="Rishishwar Industry retailer in a well-stocked grocery store" className="absolute inset-0 -z-20 size-full object-cover object-[58%_center]" />
+          <img src={storeImage} alt="Rishishwar Industry retailer in a well-stocked grocery store" className="absolute inset-0 -z-20 size-full object-cover object-[58%_center]" />
           <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/90 to-ink/20 max-md:bg-gradient-to-t max-md:from-ink max-md:via-ink/75 max-md:to-ink/10" />
           <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6">
             <div className="max-w-xl">

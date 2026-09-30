@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Factory, Globe, Handshake, MapPin, Store, Truck, Users } from "lucide-react";
-import heroBgAsset from "@/assets/hero-bg.png.asset.json";
+import heroBgAsset from "@/assets/hero-bg.webp";
 import handshakeImage from "@/assets/cta-handshake.jpg";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { Button } from "@/components/ui/button";

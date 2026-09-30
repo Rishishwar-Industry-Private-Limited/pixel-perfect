@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import productionImage from "@/assets/manufacturer-floor.jpg";
 import productsImage from "@/assets/hero-products.jpg";
 import handshakeImage from "@/assets/cta-handshake.jpg";
-import storeAsset from "@/assets/retailer-store.png.asset.json";
-import shipAsset from "@/assets/gp-ship.png.asset.json";
+import storeAsset from "@/assets/retailer-store.webp";
+import shipAsset from "@/assets/gp-ship.webp";
 
 import { stats, channels, bring, steps } from "./content";
 

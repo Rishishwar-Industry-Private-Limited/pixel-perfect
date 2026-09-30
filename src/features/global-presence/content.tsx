@@ -13,17 +13,17 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
-import heroGlobe from "@/assets/gp-india-globe.png.asset.json";
-import shipImg from "@/assets/gp-ship.png.asset.json";
-import imgIndia from "@/assets/gp-india-gate.png.asset.json";
-import imgAustralia from "@/assets/gp-australia.png.asset.json";
-import imgUsa from "@/assets/gp-usa.png.asset.json";
-import imgCanada from "@/assets/gp-canada.png.asset.json";
-import imgUae from "@/assets/gp-uae.png.asset.json";
-import imgSingapore from "@/assets/gp-singapore.png.asset.json";
-import imgUk from "@/assets/gp-uk.png.asset.json";
-import imgEurope from "@/assets/gp-europe.png.asset.json";
-import worldMap from "@/assets/gp-world-map.png.asset.json";
+import heroGlobe from "@/assets/gp-india-globe.webp";
+import shipImg from "@/assets/gp-ship.webp";
+import imgIndia from "@/assets/gp-india-gate.webp";
+import imgAustralia from "@/assets/gp-australia.webp";
+import imgUsa from "@/assets/gp-usa.webp";
+import imgCanada from "@/assets/gp-canada.webp";
+import imgUae from "@/assets/gp-uae.webp";
+import imgSingapore from "@/assets/gp-singapore.webp";
+import imgUk from "@/assets/gp-uk.webp";
+import imgEurope from "@/assets/gp-europe.webp";
+import worldMap from "@/assets/gp-world-map.webp";
 
 
 export const heroStats = [
