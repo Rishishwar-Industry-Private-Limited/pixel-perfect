@@ -9,7 +9,7 @@ import { services, steps } from "./content";
 
 export function HeroSection() {
   return (
-    <section className="dark-surface relative h-[calc(100svh-120px)] min-h-[720px] max-h-[980px] overflow-hidden border-b border-border">
+    <section className="dark-surface relative h-[calc(100svh-272px)] min-h-[568px] max-h-[830px] overflow-hidden border-b border-border">
       <img src={heroBgAsset} alt="Rishishwar Industry representative inside an FMCG retail store" className="absolute inset-0 size-full object-cover object-[62%_center]" />
       <div className="hero-overlay-mobile absolute inset-0 md:hidden" /><div className="hero-overlay absolute inset-0 hidden md:block" />
       <div className="page-shell relative flex h-full items-center py-20">
