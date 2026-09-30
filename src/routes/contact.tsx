@@ -14,7 +14,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Partner with Rishishwar Industry for FMCG market access. Write to info@rishishwarindustry.com and our team will get back to you.",
+          "Partner with Rishishwar Industry for FMCG market access. Write to sales@rishishwarindustry.in and our team will get back to you.",
       },
       {
         property: "og:title",
@@ -36,8 +36,8 @@ const contactCards = [
   {
     icon: Mail,
     title: "Email Us",
-    value: "info@rishishwarindustry.com",
-    href: "mailto:info@rishishwarindustry.com",
+    value: "sales@rishishwarindustry.in",
+    href: "mailto:sales@rishishwarindustry.in",
   },
 ];
 

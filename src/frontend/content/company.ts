@@ -1,6 +1,6 @@
 export const COMPANY = {
   name: "Rishishwar Industry",
-  email: "info@rishishwarindustry.com",
+  email: "sales@rishishwarindustry.in",
 } as const;
 
 export function openEmail(message: string, subject = "Enquiry") {

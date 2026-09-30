@@ -24,7 +24,7 @@ export function HeroSection() {
             <p className="mt-6 max-w-xl text-base leading-8 text-ink-foreground/80 sm:text-lg">Rishishwar Industry places FMCG brands in retail stores, connects them with distributors, and opens export routes across India and international markets.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg"><Link to="/partner-with-us" search={{ partner: "manufacturer" }}>Register as a manufacturer <ArrowRight aria-hidden="true" /></Link></Button>
-              <Button asChild size="lg" variant="outline" className="border-ink-foreground/40 text-ink-foreground"><a href="mailto:info@rishishwarindustry.com"><Mail aria-hidden="true" /> info@rishishwarindustry.com</a></Button>
+              <Button asChild size="lg" variant="outline" className="border-ink-foreground/40 text-ink-foreground"><a href="mailto:sales@rishishwarindustry.in"><Mail aria-hidden="true" /> sales@rishishwarindustry.in</a></Button>
             </div>
             <dl className="mt-14 grid max-w-2xl grid-cols-3 border-t border-ink-foreground/20 pt-6">
               {stats.map((s) => (
