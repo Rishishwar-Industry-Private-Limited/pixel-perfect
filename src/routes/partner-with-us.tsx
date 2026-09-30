@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Factory, Store } from "lucide-react";
-import { SiteHeader, SiteFooter } from "@/components/site-chrome";
-import { Button } from "@/components/ui/button";
-import { EmailForm } from "@/components/forms/email-form";
-import { mfgFields, retailFields } from "@/content/forms";
+import { SiteHeader, SiteFooter } from "@/frontend/components/site-chrome";
+import { Button } from "@/frontend/components/ui/button";
+import { EmailForm } from "@/frontend/components/forms/email-form";
+import { mfgFields, retailFields } from "@/frontend/content/forms";
 
 export const Route = createFileRoute("/partner-with-us")({
   validateSearch: (search: Record<string, unknown>): { partner?: "manufacturer" } =>

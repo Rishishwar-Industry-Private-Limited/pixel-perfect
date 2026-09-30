@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Mail } from "lucide-react";
-import { SiteHeader, SiteFooter } from "@/components/site-chrome";
-import { EmailForm } from "@/components/forms/email-form";
-import { contactFields } from "@/content/forms";
+import { SiteHeader, SiteFooter } from "@/frontend/components/site-chrome";
+import { EmailForm } from "@/frontend/components/forms/email-form";
+import { contactFields } from "@/frontend/content/forms";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

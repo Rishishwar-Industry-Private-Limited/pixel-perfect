@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteHeader, SiteFooter } from "@/components/site-chrome";
-import { HeroSection, HighlightsSection, CalculatorSection, CtaSection } from "@/features/retailer-partner/sections";
+import { SiteHeader, SiteFooter } from "@/frontend/components/site-chrome";
+import { HeroSection, HighlightsSection, CalculatorSection, CtaSection } from "@/frontend/features/retailer-partner/sections";
 
 export const Route = createFileRoute("/retailer-partner")({
   head: () => ({

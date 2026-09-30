@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteHeader, SiteFooter } from "@/components/site-chrome";
-import { HeroSection, CountriesSection, EndToEndSupportSection, BiggerMarketsSection, CtaSection } from "@/features/global-presence/sections";
+import { SiteHeader, SiteFooter } from "@/frontend/components/site-chrome";
+import { HeroSection, CountriesSection, EndToEndSupportSection, BiggerMarketsSection, CtaSection } from "@/frontend/features/global-presence/sections";
 
 export const Route = createFileRoute("/global-presence")({
   head: () => ({
