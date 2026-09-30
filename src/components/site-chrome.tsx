@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Globe2, Mail, Menu, Moon, Sun, X } from "lucide-react";
-import logoAsset from "@/assets/rishishwar-logo.png.asset.json";
+import logoAsset from "@/assets/rishishwar-logo.webp";
 import { Button } from "@/components/ui/button";
 import { COMPANY } from "@/content/company";
 
@@ -33,7 +33,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-ink/95 text-ink-foreground backdrop-blur-xl">
       <div className="page-shell flex h-[72px] items-center justify-between gap-6">
         <Link to="/" aria-label="Rishishwar Industry home" className="shrink-0" onClick={() => setOpen(false)}>
-          <img src={logoAsset.url} alt="Rishishwar Industry" className="h-10 w-auto sm:h-11" width={1920} height={640} />
+          <img src={logoAsset} alt="Rishishwar Industry" className="h-10 w-auto sm:h-11" width={1920} height={640} />
         </Link>
         <nav aria-label="Primary navigation" className="hidden items-center gap-6 xl:flex">
           {navLinks.map((link) => {
@@ -66,7 +66,7 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-ink text-ink-foreground">
       <div className="page-shell grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
-          <img src={logoAsset.url} alt="Rishishwar Industry" loading="lazy" className="h-12 w-auto" width={1920} height={640} />
+          <img src={logoAsset} alt="Rishishwar Industry" loading="lazy" className="h-12 w-auto" width={1920} height={640} />
           <p className="mt-5 max-w-sm text-sm leading-7 text-ink-foreground/60">FMCG manufacturers ko retail networks, reliable partners aur global markets se jodne wala business growth platform.</p>
           <p className="mt-6 flex items-center gap-2 font-display text-[10px] font-semibold uppercase tracking-widest text-primary"><Globe2 className="size-4" /> Domestic · International</p>
         </div>

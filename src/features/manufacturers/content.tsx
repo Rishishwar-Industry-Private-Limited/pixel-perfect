@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import productionImage from "@/assets/manufacturer-floor.jpg";
 import productsImage from "@/assets/hero-products.jpg";
 import handshakeImage from "@/assets/cta-handshake.jpg";
-import storeAsset from "@/assets/retailer-store.png.asset.json";
-import shipAsset from "@/assets/gp-ship.png.asset.json";
+import storeAsset from "@/assets/retailer-store.webp";
+import shipAsset from "@/assets/gp-ship.webp";
 
 
 export const stats = [
@@ -16,9 +16,9 @@ export const stats = [
 ];
 
 export const channels = [
-  { image: storeAsset.url, title: "Shelf space in retail stores", body: "Your products placed in kirana, general and modern-trade stores across our network — with the store owners we already work with every week.", to: "/our-services" as const },
+  { image: storeAsset, title: "Shelf space in retail stores", body: "Your products placed in kirana, general and modern-trade stores across our network — with the store owners we already work with every week.", to: "/our-services" as const },
   { image: productsImage, title: "Distributors who fit your category", body: "We introduce you to distributors that already move products like yours, in the towns you want to sell in. No cold lists.", to: "/our-services" as const },
-  { image: shipAsset.url, title: "Export to international buyers", body: "For brands ready to go abroad, we open conversations with buyers in the UAE, UK, USA, Canada, Singapore, Australia and Europe.", to: "/global-presence" as const },
+  { image: shipAsset, title: "Export to international buyers", body: "For brands ready to go abroad, we open conversations with buyers in the UAE, UK, USA, Canada, Singapore, Australia and Europe.", to: "/global-presence" as const },
 ];
 
 export const bring = [
