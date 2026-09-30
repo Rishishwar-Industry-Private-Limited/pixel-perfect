@@ -64,8 +64,8 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-ink text-ink-foreground">
-      <div className="page-shell grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
-        <div>
+      <div className="page-shell grid grid-cols-2 gap-x-6 gap-y-10 py-12 sm:py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div className="col-span-2 md:col-span-1">
           <img src={logoAsset} alt="Rishishwar Industry" loading="lazy" className="h-12 w-auto" width={1920} height={640} />
           <p className="mt-5 max-w-sm text-sm leading-7 text-ink-foreground/60">FMCG manufacturers ko retail networks, reliable partners aur global markets se jodne wala business growth platform.</p>
           <p className="mt-6 flex items-center gap-2 font-display text-[10px] font-semibold uppercase tracking-widest text-primary"><Globe2 className="size-4" /> Domestic · International</p>
@@ -86,7 +86,7 @@ export function SiteFooter() {
             <li><Link to="/register-your-store" className="hover:text-primary">Register Your Store</Link></li>
           </ul>
         </nav>
-        <div>
+        <div className="col-span-2 md:col-span-1">
           <h3 className="text-sm uppercase tracking-wider text-accent-foreground">Contact</h3>
           <ul className="mt-5 space-y-4 text-sm text-ink-foreground/60">
             <li><a href={`mailto:${COMPANY.email}`} className="flex items-start gap-3 break-all hover:text-primary"><Mail className="mt-0.5 size-4 shrink-0 text-primary" />{COMPANY.email}</a></li>
