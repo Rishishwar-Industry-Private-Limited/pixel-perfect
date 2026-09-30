@@ -9,17 +9,17 @@ import { services, steps } from "./content";
 
 export function HeroSection() {
   return (
-    <section className="dark-surface relative h-[calc(100svh-272px)] min-h-[568px] max-h-[830px] overflow-hidden border-b border-border">
+    <section className="dark-surface relative overflow-hidden border-b border-border sm:h-[calc(100svh-272px)] sm:min-h-[568px] sm:max-h-[830px]">
       <img src={heroBgAsset} alt="Rishishwar Industry representative inside an FMCG retail store" className="absolute inset-0 size-full object-cover object-[62%_center]" />
       <div className="hero-overlay-mobile absolute inset-0 md:hidden" /><div className="hero-overlay absolute inset-0 hidden md:block" />
-      <div className="page-shell relative flex h-full items-center py-20">
+      <div className="page-shell relative flex h-full flex-col justify-center py-14 sm:items-center sm:py-20">
         <div className="max-w-5xl">
           <p className="royal-label">From Manufacturer to Market</p>
-          <h1 className="mt-7 text-5xl leading-[1.04] sm:text-6xl lg:text-7xl"><span className="block">We Build Markets.</span><span className="mt-2 block text-accent-foreground">You Grow Your Sales.</span></h1>
-          <p className="mt-7 max-w-xl text-base leading-7 text-ink-foreground/65 sm:text-lg">Rishishwar Industry connects FMCG manufacturers with retail networks, distributors and international opportunities.</p>
-          <div className="mt-9 flex flex-wrap gap-4"><Button asChild size="lg"><Link to="/manufacturers">For Manufacturers <ArrowRight /></Link></Button><Button asChild size="lg" variant="outline" className="border-ink-foreground/30 text-ink-foreground"><Link to="/our-services">Explore Services</Link></Button></div>
+          <h1 className="mt-5 text-4xl leading-[1.06] sm:mt-7 sm:text-6xl lg:text-7xl"><span className="block">We Build Markets.</span><span className="mt-2 block text-accent-foreground">You Grow Your Sales.</span></h1>
+          <p className="mt-5 max-w-xl text-base leading-7 text-ink-foreground/65 sm:mt-7 sm:text-lg">Rishishwar Industry connects FMCG manufacturers with retail networks, distributors and international opportunities.</p>
+          <div className="mt-8 grid gap-3 sm:mt-9 sm:flex sm:flex-wrap sm:gap-4"><Button asChild size="lg" className="w-full sm:w-auto"><Link to="/manufacturers">For Manufacturers <ArrowRight /></Link></Button><Button asChild size="lg" variant="outline" className="w-full border-ink-foreground/30 text-ink-foreground sm:w-auto"><Link to="/our-services">Explore Services</Link></Button></div>
         </div>
-        <dl className="absolute bottom-8 left-4 right-4 grid grid-cols-2 border border-border bg-ink/75 backdrop-blur-md sm:left-auto sm:right-6 sm:w-[520px] sm:grid-cols-4 lg:right-8">
+        <dl className="mt-10 grid grid-cols-2 border border-border bg-ink/75 backdrop-blur-md sm:absolute sm:bottom-8 sm:left-auto sm:right-6 sm:mt-0 sm:w-[520px] sm:grid-cols-4 lg:right-8">
           {[["2,000+","Retail Stores"],["23+","Indian Cities"],["8","Countries"],["End-to-End","Support"]].map(([v,l]) => <div key={l} className="border-r border-border p-4 last:border-r-0"><dt className="font-display text-xl text-accent-foreground">{v}</dt><dd className="mt-1 text-[10px] uppercase tracking-wider text-ink-foreground/50">{l}</dd></div>)}
         </dl>
       </div>
