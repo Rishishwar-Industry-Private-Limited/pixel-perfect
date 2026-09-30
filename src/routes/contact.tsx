@@ -35,9 +35,15 @@ export const Route = createFileRoute("/contact")({
 const contactCards = [
   {
     icon: Mail,
-    title: "Email Us",
+    title: "Sales Enquiries",
     value: "sales@rishishwarindustry.in",
     href: "mailto:sales@rishishwarindustry.in",
+  },
+  {
+    icon: Mail,
+    title: "General Information",
+    value: "info@rishishwarindustry.in",
+    href: "mailto:info@rishishwarindustry.in",
   },
 ];
 
