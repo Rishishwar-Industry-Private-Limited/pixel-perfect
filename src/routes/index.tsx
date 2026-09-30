@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteFooter, SiteHeader } from "@/components/site-chrome";
-import { HeroSection, CapabilitiesSection, ProcessSection, CtaSection } from "@/features/home/sections";
+import { SiteFooter, SiteHeader } from "@/frontend/components/site-chrome";
+import { HeroSection, CapabilitiesSection, ProcessSection, CtaSection } from "@/frontend/features/home/sections";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [

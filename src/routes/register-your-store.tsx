@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteHeader, SiteFooter } from "@/components/site-chrome";
-import { EmailForm } from "@/components/forms/email-form";
-import { storeFields } from "@/content/forms";
+import { SiteHeader, SiteFooter } from "@/frontend/components/site-chrome";
+import { EmailForm } from "@/frontend/components/forms/email-form";
+import { storeFields } from "@/frontend/content/forms";
 
 export const Route = createFileRoute("/register-your-store")({
   head: () => ({

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteHeader, SiteFooter } from "@/components/site-chrome";
-import { HeroSection, FundingNeedsSection, WhoCanApplyFormSection, FundingProcessSection, AcrossIndiaSection, DisclaimerSection } from "@/features/fund-your-business/sections";
+import { SiteHeader, SiteFooter } from "@/frontend/components/site-chrome";
+import { HeroSection, FundingNeedsSection, WhoCanApplyFormSection, FundingProcessSection, AcrossIndiaSection, DisclaimerSection } from "@/frontend/features/fund-your-business/sections";
 
 export const Route = createFileRoute("/fund-your-business")({
   head: () => ({
