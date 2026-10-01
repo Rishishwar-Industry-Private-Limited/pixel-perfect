@@ -35,7 +35,7 @@ export function HeroSection() {
           <img src={servicesHero} alt="FMCG distribution warehouse with stacked shelves of packaged products" className="absolute inset-0 size-full object-cover opacity-50" width={1792} height={1024} />
           <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/30" aria-hidden="true" />
           <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
-             <h1 className="text-5xl leading-tight sm:text-7xl">
+             <h1 className="text-4xl leading-tight sm:text-7xl">
                Our <span className="text-accent-foreground">Services</span>
             </h1>
             <p className="mt-4 inline-block rounded-md bg-primary px-4 py-2 text-sm font-bold uppercase tracking-wide text-primary-foreground">
@@ -47,11 +47,11 @@ export function HeroSection() {
             <p className="mt-3 max-w-xl text-ink-foreground/75">
               Rishishwar Industry is a business management company for FMCG manufacturers. Each service below is a complete, working route from your production floor to a customer's hands.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button asChild size="lg" className="h-12">
+             <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
+               <Button asChild size="lg" className="h-12">
                 <a href="#services">Explore Our Services <ArrowRight aria-hidden="true" /></a>
               </Button>
-              <Button asChild size="lg" variant="outline" className="h-12 border-ink-foreground/30 bg-transparent text-ink-foreground hover:bg-ink-foreground/10 hover:text-ink-foreground">
+               <Button asChild size="lg" variant="outline" className="h-12 border-ink-foreground/30 bg-transparent text-ink-foreground hover:bg-ink-foreground/10 hover:text-ink-foreground">
                 <Link to="/contact">Talk To Our Team</Link>
               </Button>
             </div>

@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Mail } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/frontend/components/site-chrome";
 import { EmailForm } from "@/frontend/components/forms/email-form";
+import { EnquiryChecklist } from "@/frontend/components/forms/enquiry-checklist";
 import { contactFields } from "@/frontend/content/forms";
 
 export const Route = createFileRoute("/contact")({
@@ -57,7 +58,7 @@ function ContactPage() {
             <p className="royal-label">
               Contact Us
             </p>
-            <h1 className="mt-6 max-w-3xl text-5xl leading-[1.02] sm:text-7xl">
+            <h1 className="mt-6 max-w-3xl text-4xl leading-[1.02] sm:text-7xl">
               Let's Build Your{" "}
               <span className="text-primary">Market Together</span>
             </h1>
@@ -69,7 +70,8 @@ function ContactPage() {
           </div>
         </section>
 
-        <section className="page-shell py-20 sm:py-28">
+        <EnquiryChecklist />
+        <section className="page-shell py-14 sm:py-28">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
             <div className="space-y-6">
               {contactCards.map((c) => {
@@ -78,9 +80,9 @@ function ContactPage() {
                     <span className="flex size-14 shrink-0 items-center justify-center rounded-full bg-primary/10">
                       <c.icon className="size-6 text-primary" strokeWidth={1.8} />
                     </span>
-                    <div>
+                    <div className="min-w-0">
                       <h2 className="text-lg">{c.title}</h2>
-                      <p className="mt-1 text-sm text-muted-foreground">
+                      <p className="mt-1 break-all text-sm text-muted-foreground">
                         {c.value}
                       </p>
                     </div>
@@ -90,7 +92,7 @@ function ContactPage() {
                   <a
                     key={c.title}
                     href={c.href}
-                    className="card-lift flex items-center gap-5 rounded-sm border bg-card p-6"
+                    className="card-lift flex items-center gap-3 rounded-sm border bg-card p-4 sm:gap-5 sm:p-6"
                   >
                     {inner}
                   </a>

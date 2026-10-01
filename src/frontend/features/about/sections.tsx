@@ -35,7 +35,7 @@ export function AboutHero() {
             <p className="royal-label">
             About Rishishwar Industry
           </p>
-           <h1 className="mt-6 text-5xl leading-[1.02] sm:text-7xl">
+            <h1 className="mt-6 text-4xl leading-[1.02] sm:text-7xl">
             Driven by Markets.
              <span className="block text-accent-foreground">Built for Manufacturers.</span>
           </h1>
@@ -150,7 +150,7 @@ export function Story() {
 export function StatsBar() {
   return (
     <section className="px-4 pb-16 sm:px-6">
-      <div className="mx-auto grid max-w-7xl gap-8 rounded-sm border border-border bg-ink px-8 py-12 text-ink-foreground sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 rounded-sm border border-border bg-ink px-4 py-8 text-ink-foreground sm:gap-8 sm:px-8 sm:py-12 lg:grid-cols-4">
         {stats.map((s) => (
           <div key={s.label} className="flex flex-col items-center text-center">
             <span className="flex size-14 items-center justify-center rounded-full border-2 border-primary">

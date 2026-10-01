@@ -20,13 +20,13 @@ export function HeroSection() {
           <div className="hero-overlay absolute inset-0 -z-10 hidden md:block" />
           <div className="page-shell w-full pb-14 pt-28">
             <p className="royal-label">For FMCG manufacturers</p>
-            <h1 className="mt-6 max-w-3xl text-5xl leading-[1.02] sm:text-6xl lg:text-7xl">You make the product. <span className="text-accent-foreground">We get it sold.</span></h1>
+            <h1 className="mt-6 max-w-3xl text-4xl leading-[1.02] sm:text-6xl lg:text-7xl">You make the product. <span className="text-accent-foreground">We get it sold.</span></h1>
             <p className="mt-6 max-w-xl text-base leading-8 text-ink-foreground/80 sm:text-lg">Rishishwar Industry places FMCG brands in retail stores, connects them with distributors, and opens export routes across India and international markets.</p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild size="lg"><Link to="/partner-with-us" search={{ partner: "manufacturer" }}>Register as a manufacturer <ArrowRight aria-hidden="true" /></Link></Button>
-              <Button asChild size="lg" variant="outline" className="border-ink-foreground/40 text-ink-foreground"><a href="mailto:sales@rishishwarindustry.in"><Mail aria-hidden="true" /> sales@rishishwarindustry.in</a></Button>
+            <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
+              <Button asChild size="lg" className="h-auto min-h-12 whitespace-normal text-center"><Link to="/partner-with-us" search={{ partner: "manufacturer" }}>Register as a manufacturer <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild size="lg" variant="outline" className="h-auto min-h-12 whitespace-normal border-ink-foreground/40 text-ink-foreground"><a href="mailto:sales@rishishwarindustry.in"><Mail aria-hidden="true" /> sales@rishishwarindustry.in</a></Button>
             </div>
-            <dl className="mt-14 grid max-w-2xl grid-cols-3 border-t border-ink-foreground/20 pt-6">
+            <dl className="mt-10 grid max-w-2xl grid-cols-2 gap-5 border-t border-ink-foreground/20 pt-6 sm:mt-14 sm:grid-cols-3">
               {stats.map((s) => (
                 <div key={s.label}><dt className="text-xs uppercase tracking-[0.2em] text-ink-foreground/60">{s.label}</dt><dd className="mt-1 font-display text-3xl font-bold sm:text-4xl">{s.value}</dd></div>
               ))}
@@ -44,7 +44,7 @@ export function ChannelsSection() {
           <div className="page-shell">
             <p className="royal-label">What we do for you</p>
             <h2 className="mt-6 max-w-2xl text-4xl sm:text-5xl">Three ways your product reaches more buyers.</h2>
-            <div className="mt-14 space-y-16 sm:space-y-20">
+            <div className="mt-10 space-y-12 sm:mt-14 sm:space-y-20">
               {channels.map((c, i) => (
                 <article key={c.title} className={`grid items-center gap-8 lg:grid-cols-2 lg:gap-16 ${i % 2 ? "lg:[&>*:first-child]:order-2" : ""}`}>
                   <img src={c.image} alt="" loading="lazy" className="aspect-[16/10] w-full border border-border object-cover" />
@@ -79,7 +79,7 @@ export function HowItWorksSection() {
                 ))}
               </ol>
             </div>
-            <div className="border border-border bg-background p-8 sm:p-10">
+            <div className="border border-border bg-background p-5 sm:p-10">
               <h3 className="text-xl">Keep these ready for the first call</h3>
               <ul className="mt-6 space-y-4">
                 {bring.map((b) => (
