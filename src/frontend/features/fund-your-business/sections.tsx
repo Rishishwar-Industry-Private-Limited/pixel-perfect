@@ -40,7 +40,7 @@ export function HeroSection() {
           <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/30" aria-hidden="true" />
           <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
             <div>
-              <h1 className="text-5xl font-bold leading-tight sm:text-6xl">
+               <h1 className="text-4xl font-bold leading-tight sm:text-6xl">
                 Fund Your <span className="text-primary">Business</span>
               </h1>
               <p className="mt-4 inline-block rounded-md bg-primary px-4 py-2 text-sm font-bold uppercase tracking-wide text-primary-foreground">
@@ -50,7 +50,7 @@ export function HeroSection() {
               <p className="mt-3 max-w-xl text-ink-foreground/75">
                 Rishishwar Industry helps eligible manufacturers explore funding solutions for machinery, plant &amp; equipment and working capital.
               </p>
-              <div className="mt-7 flex flex-wrap gap-4">
+               <div className="mt-7 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
                 <Button asChild size="lg" className="h-12">
                   <a href="#apply">Apply for Business Funding <ArrowRight aria-hidden="true" /></a>
                 </Button>

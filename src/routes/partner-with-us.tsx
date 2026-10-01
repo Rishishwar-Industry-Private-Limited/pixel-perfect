@@ -36,15 +36,15 @@ function PartnerPage() {
          <section className="cinematic-section border-b border-border bg-ink px-4 text-ink-foreground sm:px-6">
           <div className="mx-auto max-w-4xl text-center">
              <p className="royal-label justify-center">Partnership Registration</p>
-             <h1 className="mt-6 text-5xl sm:text-7xl">Partner <span className="text-accent-foreground">With Us</span></h1>
+              <h1 className="mt-6 text-4xl sm:text-7xl">Partner <span className="text-accent-foreground">With Us</span></h1>
             <p className="mx-auto mt-4 max-w-2xl text-ink-foreground/75">Retail store ho ya FMCG manufacturer — neeche apni category chuniye, form bhariye, aur hamari team aapse agle steps ke liye contact karegi.</p>
           </div>
         </section>
         <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
-          <div role="tablist" className="grid gap-4 sm:grid-cols-2">
+          <div role="tablist" className="grid gap-3 sm:grid-cols-2 sm:gap-4">
             {tabs.map(({ id, icon: Icon, title, text }) => (
                <Button key={id} id={`${id}-tab`} role="tab" aria-controls="partner-panel" aria-selected={tab === id} onClick={() => setTab(id)} variant="outline"
-                 className={`card-lift h-auto justify-start whitespace-normal rounded-sm border p-5 text-left normal-case tracking-normal ${tab === id ? "border-primary bg-accent text-foreground" : "border-border bg-card text-foreground"}`}>
+                  className={`card-lift h-auto justify-start whitespace-normal rounded-sm border p-4 text-left normal-case tracking-normal sm:p-5 ${tab === id ? "border-primary bg-accent text-foreground" : "border-border bg-card text-foreground"}`}>
                 <Icon className="mt-0.5 size-7 shrink-0 text-primary" aria-hidden="true" />
                 <div><h2 className="text-lg">{title}</h2><p className="mt-1 text-sm text-muted-foreground">{text}</p></div>
                </Button>
