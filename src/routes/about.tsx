@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader, SiteFooter } from "@/frontend/components/site-chrome";
 import { AboutHero, MissionVision, Story, StatsBar, WhatWeDo, WhyUs, GlobalMindset, GrowCta } from "@/frontend/features/about/sections";
+import { districtFigure, totalStoreFigure } from "@/frontend/data/retail-network";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -12,7 +13,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Rishishwar Industry helps FMCG manufacturers grow beyond factory walls — 2,000+ retail stores, 23+ cities in India and 8 countries of market access.",
+          `Rishishwar Industry helps FMCG manufacturers grow beyond factory walls — ${totalStoreFigure} retail stores, ${districtFigure} districts in India and 8 countries of market access.`,
       },
       {
         property: "og:title",

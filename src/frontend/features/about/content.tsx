@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { districtFigure, totalStoreFigure } from "@/frontend/data/retail-network";
 import {
   Target,
   Eye,
@@ -19,8 +20,8 @@ import handshakeImage from "@/frontend/assets/cta-handshake.jpg";
 
 
 export const stats = [
-  { icon: Store, value: "2,000+", label: "Retail Stores" },
-  { icon: MapPin, value: "23+", label: "Cities in India" },
+  { icon: Store, value: totalStoreFigure, label: "Retail Stores" },
+  { icon: MapPin, value: districtFigure, label: "Districts in India" },
   { icon: Users, value: "Distributor &", label: "Dealer Network" },
   { icon: Globe, value: "8 Countries", label: "Global Presence" },
 ];
@@ -29,7 +30,7 @@ export const services = [
   {
     icon: Store,
     title: "Retail Network Access",
-    text: "Get your products into 2,000+ retail stores across 23+ cities.",
+    text: `Get your products into ${totalStoreFigure} retail stores across ${districtFigure} districts.`,
   },
   {
     icon: Users,
@@ -52,7 +53,7 @@ export const trustPoints = [
   {
     icon: ShieldCheck,
     title: "Proven Retail Network",
-    text: "2,000+ stores and growing.",
+    text: `${totalStoreFigure} stores and growing.`,
   },
   {
     icon: Star,

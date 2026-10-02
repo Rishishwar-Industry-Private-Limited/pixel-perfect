@@ -26,6 +26,7 @@ import { Button } from "@/frontend/components/ui/button";
 import servicesHero from "@/frontend/assets/services-hero.jpg";
 
 import { Service, services, howWeWork, stats, whoWeServe } from "./content";
+import { totalStoreFigure } from "@/frontend/data/retail-network";
 
 
 export function HeroSection() {
@@ -182,7 +183,7 @@ export function ServiceCtasSection() {
              <div className="rounded-sm border border-border bg-card p-7">
               <Store className="size-8 text-primary" aria-hidden="true" />
               <h3 className="mt-4 font-display text-lg font-bold">Have A Store?</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Join 2,000+ retail stores as a retail partner and calculate your approximate rent.</p>
+              <p className="mt-2 text-sm text-muted-foreground">Join {totalStoreFigure} retail stores as a retail partner and calculate your approximate rent.</p>
               <Button asChild variant="outline" className="mt-5">
                 <Link to="/retailer-partner">Retailer Partner <ArrowRight aria-hidden="true" /></Link>
               </Button>

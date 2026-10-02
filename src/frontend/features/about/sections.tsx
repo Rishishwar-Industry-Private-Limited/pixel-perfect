@@ -18,6 +18,7 @@ import officeImage from "@/frontend/assets/about-office.jpg";
 import handshakeImage from "@/frontend/assets/cta-handshake.jpg";
 
 import { stats, services, trustPoints, countries } from "./content";
+import { districtFigure, totalStoreFigure } from "@/frontend/data/retail-network";
 
 export function AboutHero() {
   return (
@@ -115,7 +116,7 @@ export function Story() {
             people.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Today, with 2,000+ retail stores across 23+ cities in India and
+            Today, with {totalStoreFigure} retail stores across {districtFigure} districts in India and
             presence in 8 international markets, we continue to create new
             growth opportunities for FMCG brands.
           </p>

@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { districtFigure, totalStoreFigure } from "@/frontend/data/retail-network";
 import { ArrowRight, Check, Mail } from "lucide-react";
 import { SiteFooter, SiteHeader } from "@/frontend/components/site-chrome";
 import { Button } from "@/frontend/components/ui/button";
@@ -10,8 +11,8 @@ import shipAsset from "@/frontend/assets/gp-ship.webp";
 
 
 export const stats = [
-  { value: "2,000+", label: "Retail stores" },
-  { value: "23+", label: "Indian cities" },
+  { value: totalStoreFigure, label: "Retail stores" },
+  { value: districtFigure, label: "Indian districts" },
   { value: "8", label: "Countries" },
 ];
 
