@@ -22,3 +22,4 @@
 - Screen code (components, features, content, hooks, assets, data) lives in src/frontend/; server-only code (enquiry email sending, validation) lives in src/backend/ as *.server.ts — keeps the two maintainable separately inside one deployable app.
 - src/routes, src/lib, router/start files stay at src/ root because the framework requires them there.
 - Backend uses no Supabase/Cloud; enquiries are sent by email via Lovable Emails — user explicitly rejected Supabase.
+- AI enquiry guidance uses a public validated server function and a server-only Lovable AI Gateway client; no customer input is persisted — keeps the feature private and consistent with the no-database requirement.
