@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { districtFigure, totalStoreFigure } from "@/frontend/data/retail-network";
 import {
   ArrowRight,
   Box,
@@ -28,13 +29,13 @@ import worldMap from "@/frontend/assets/gp-world-map.webp";
 
 export const heroStats = [
   { icon: Globe, value: "8", label: "Countries" },
-  { icon: Users, value: "2,000+", label: "Retail Stores" },
-  { icon: MapPin, value: "23+", label: "Cities in India" },
+  { icon: Users, value: totalStoreFigure, label: "Retail Stores" },
+  { icon: MapPin, value: districtFigure, label: "Districts in India" },
   { icon: BarChart3, value: "Growing", label: "Global Network" },
 ];
 
 export const countries = [
-  { name: "India", flag: "🇮🇳", img: imgIndia, note: "2,000+ retail stores across 23+ cities" },
+  { name: "India", flag: "🇮🇳", img: imgIndia, note: `${totalStoreFigure} retail stores across ${districtFigure} districts` },
   { name: "Australia", flag: "🇦🇺", img: imgAustralia, note: "Growing FMCG market opportunities" },
   { name: "USA", flag: "🇺🇸", img: imgUsa, note: "Expanding Indian brands in key cities" },
   { name: "Canada", flag: "🇨🇦", img: imgCanada, note: "Building retail and distribution networks" },

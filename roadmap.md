@@ -6,3 +6,4 @@
 - [open] Send form enquiries to inbox by email — waiting on email domain setup
 - [done] Add an AI-generated, personalized industrial enquiry checklist before email contact.
 - [done] Review phone, tablet and desktop layouts across all pages; correct home headline placement.
+- [open] Add a responsive four-field retail network indicator using the supplied state/area/district/store table; sync store and location totals across relevant pages.

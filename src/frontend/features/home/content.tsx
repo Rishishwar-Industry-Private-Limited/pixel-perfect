@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { districtFigure, totalStoreFigure } from "@/frontend/data/retail-network";
 import { ArrowRight, Factory, Globe, Handshake, MapPin, Store, Truck, Users } from "lucide-react";
 import heroBgAsset from "@/frontend/assets/hero-bg.webp";
 import handshakeImage from "@/frontend/assets/cta-handshake.jpg";
@@ -7,7 +8,7 @@ import { Button } from "@/frontend/components/ui/button";
 
 
 export const services = [
-  { icon: Store, title: "Retail Network Access", text: "2,000+ stores across 23+ cities.", to: "/our-services" as const },
+  { icon: Store, title: "Retail Network Access", text: `${totalStoreFigure} stores across ${districtFigure} districts.`, to: "/our-services" as const },
   { icon: Users, title: "Distributor Partnerships", text: "Verified partners for the right markets.", to: "/our-services" as const },
   { icon: Truck, title: "Domestic Expansion", text: "Structured growth across Indian markets.", to: "/our-services" as const },
   { icon: Globe, title: "Global Market Support", text: "Market access across 8 countries.", to: "/global-presence" as const },

@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { districtFigure, totalStoreFigure } from "@/frontend/data/retail-network";
 import { Link } from "@tanstack/react-router";
 import {
   ArrowRight,
@@ -40,10 +41,10 @@ export const services: Service[] = [
     id: "retail-network",
     icon: Store,
     title: "Retail Network Access",
-    tagline: "Direct shelf space in 2,000+ retail stores",
+    tagline: `Direct shelf space in ${totalStoreFigure} retail stores`,
     text: "Getting your product into stores is the hardest step. Through our established retail relationships, your products reach real shelves in real stores — without waiting years to build a network from zero.",
     points: [
-      "Access to 2,000+ retail stores across 23+ Indian cities",
+      `Access to ${totalStoreFigure} retail stores across ${districtFigure} Indian districts`,
       "Placement across grocery, kirana and modern trade counters",
       "Location and area-based store matching for your products",
       "Ongoing retail relationship management",
@@ -124,8 +125,8 @@ export const howWeWork: { icon: LucideIcon; step: string; title: string; text: s
 ];
 
 export const stats: { icon: LucideIcon; value: string; label: string }[] = [
-  { icon: Store, value: "2,000+", label: "Retail Stores" },
-  { icon: MapPin, value: "23+", label: "Cities in India" },
+  { icon: Store, value: totalStoreFigure, label: "Retail Stores" },
+  { icon: MapPin, value: districtFigure, label: "Districts in India" },
   { icon: Globe, value: "8", label: "Countries" },
   { icon: PackageCheck, value: "End-to-End", label: "Support" },
 ];

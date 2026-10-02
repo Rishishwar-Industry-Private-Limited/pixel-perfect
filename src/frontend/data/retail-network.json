@@ -1,0 +1,278 @@
+[
+  {
+    "state": "Madhya Pradesh",
+    "district": "Gwalior",
+    "area": "Gwalior Belt",
+    "stores": 62
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Bhind",
+    "area": "Gwalior Belt",
+    "stores": 23
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Morena",
+    "area": "Gwalior Belt",
+    "stores": 49
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Datia",
+    "area": "Gwalior Belt",
+    "stores": 43
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Sheopur",
+    "area": "Gwalior Belt",
+    "stores": 38
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Shivpuri",
+    "area": "Gwalior Belt",
+    "stores": 47
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Guna",
+    "area": "Gwalior Belt",
+    "stores": 68
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Ashoknagar",
+    "area": "Gwalior Belt",
+    "stores": 52
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Bhopal",
+    "area": "Bhopal & Central MP Belt",
+    "stores": 55
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Sehore",
+    "area": "Bhopal & Central MP Belt",
+    "stores": 62
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Raisen",
+    "area": "Bhopal & Central MP Belt",
+    "stores": 53
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Vidisha",
+    "area": "Bhopal & Central MP Belt",
+    "stores": 48
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Rajgarh",
+    "area": "Bhopal & Central MP Belt",
+    "stores": 61
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Narmadapuram",
+    "area": "Bhopal & Central MP Belt",
+    "stores": 36
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Indore",
+    "area": "Indore & West MP Belt",
+    "stores": 132
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Dewas",
+    "area": "Indore & West MP Belt",
+    "stores": 84
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Ujjain",
+    "area": "Indore & West MP Belt",
+    "stores": 93
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Dhar",
+    "area": "Indore & West MP Belt",
+    "stores": 65
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Ratlam",
+    "area": "Indore & West MP Belt",
+    "stores": 68
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Mandsaur",
+    "area": "Indore & West MP Belt",
+    "stores": 42
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Neemuch",
+    "area": "Indore & West MP Belt",
+    "stores": 49
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Shajapur",
+    "area": "Indore & West MP Belt",
+    "stores": 52
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Khandwa",
+    "area": "Indore & West MP Belt",
+    "stores": 55
+  },
+  {
+    "state": "Madhya Pradesh",
+    "district": "Khargone",
+    "area": "Indore & West MP Belt",
+    "stores": 32
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Jhansi",
+    "area": "Jhansi Belt",
+    "stores": 69
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Lalitpur",
+    "area": "Jhansi Belt",
+    "stores": 56
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Jalaun",
+    "area": "Jhansi Belt",
+    "stores": 49
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Hamirpur",
+    "area": "Jhansi Belt",
+    "stores": 56
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Mahoba",
+    "area": "Jhansi Belt",
+    "stores": 53
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Banda",
+    "area": "Bundelkhand Belt",
+    "stores": 33
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Agra",
+    "area": "Agra Belt",
+    "stores": 122
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Firozabad",
+    "area": "Agra Belt",
+    "stores": 116
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Mainpuri",
+    "area": "Agra Belt",
+    "stores": 82
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Etawah",
+    "area": "Agra Belt",
+    "stores": 81
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Auraiya",
+    "area": "Agra Belt",
+    "stores": 92
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Mathura",
+    "area": "Agra Belt",
+    "stores": 128
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Hathras",
+    "area": "Agra Belt",
+    "stores": 41
+  },
+  {
+    "state": "Uttar Pradesh",
+    "district": "Aligarh",
+    "area": "Agra Belt",
+    "stores": 68
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Dholpur",
+    "area": "Chambal Belt",
+    "stores": 48
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Karauli",
+    "area": "Chambal Belt",
+    "stores": 55
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Sawai Madhopur",
+    "area": "Chambal Belt",
+    "stores": 65
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Bharatpur",
+    "area": "Chambal Belt",
+    "stores": 41
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Kota",
+    "area": "Chambal Belt",
+    "stores": 72
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Bundi",
+    "area": "Chambal Belt",
+    "stores": 58
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Baran",
+    "area": "Chambal Belt",
+    "stores": 52
+  },
+  {
+    "state": "Rajasthan",
+    "district": "Jhalawar",
+    "area": "Chambal Belt",
+    "stores": 32
+  }
+]
