@@ -58,7 +58,7 @@ export function RetailNetworkIndicator() {
             <p className="mt-1 flex items-center gap-2 font-display text-2xl leading-10 text-foreground"><Store className="size-5 shrink-0 text-primary" aria-hidden="true" />{count.toLocaleString("en-IN")}</p>
           </div>
         </div>
-        <p className="mt-2 text-xs text-muted-foreground">Figures cover the listed districts. Site-wide store figures show a conservative {storeFigure(50)}-step rounded total.</p>
+        <p className="mt-2 text-xs text-muted-foreground">Figures cover the listed districts. Site-wide store figures are rounded down to the nearest 50 with a + sign.</p>
       </div>
     </section>
   );
