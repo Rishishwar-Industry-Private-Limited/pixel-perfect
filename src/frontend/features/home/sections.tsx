@@ -15,7 +15,7 @@ export function HeroSection() {
       <div className="page-shell relative flex h-full flex-col justify-center py-14 sm:items-start sm:py-20">
         <div className="max-w-3xl lg:max-w-4xl">
           <p className="royal-label">From Manufacturer to Market</p>
-          <h1 className="mt-5 text-4xl leading-[1.06] sm:mt-7 sm:text-6xl lg:text-6xl"><span className="block">We Build Markets.</span><span className="mt-2 block text-accent-foreground">You Grow Your Sales.</span></h1>
+          <h1 className="mt-5 text-4xl leading-[1.06] sm:mt-7 sm:text-5xl lg:text-6xl"><span className="block">We Build Markets.</span><span className="mt-2 block text-accent-foreground">You Grow Your Sales.</span></h1>
           <p className="mt-5 max-w-xl text-base leading-7 text-ink-foreground/65 sm:mt-7 sm:text-lg">Rishishwar Industry connects FMCG manufacturers with retail networks, distributors and international opportunities.</p>
           <div className="mt-8 grid gap-3 sm:mt-9 sm:flex sm:flex-wrap sm:gap-4"><Button asChild size="lg" className="w-full sm:w-auto"><Link to="/manufacturers">For Manufacturers <ArrowRight /></Link></Button><Button asChild size="lg" variant="outline" className="w-full border-ink-foreground/30 text-ink-foreground sm:w-auto"><Link to="/our-services">Explore Services</Link></Button></div>
         </div>
