@@ -4,5 +4,5 @@
 - [done] Manufacturers page: removed unverified claims — callback time ("two working days"), call duration ("30 minutes"), licence examples ("FSSAI / BIS"). Restore only if user confirms them.
 - [done] Split code into src/frontend and src/backend
 - [open] Send form enquiries to inbox by email — waiting on email domain setup
-- [open] Add an AI-generated, personalized industrial enquiry checklist before email contact.
-- [open] Review phone, tablet and desktop layouts across all pages; correct home headline placement.
+- [done] Add an AI-generated, personalized industrial enquiry checklist before email contact.
+- [done] Review phone, tablet and desktop layouts across all pages; correct home headline placement.

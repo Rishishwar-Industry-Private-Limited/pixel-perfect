@@ -1,5 +1,6 @@
 import { createOpenAI } from "@ai-sdk/openai";
 import { streamText } from "ai";
+import { createAiGatewayRunIdFetch } from "./ai-gateway-run-id.server";
 
 export async function generateEnquiryChecklist(requirements: string) {
   const apiKey = process.env['LOVABLE_API_KEY'];
@@ -9,6 +10,7 @@ export async function generateEnquiryChecklist(requirements: string) {
     baseURL: "https://ai.gateway.lovable.dev/v1",
     apiKey,
     headers: { "Lovable-API-Key": apiKey, "X-Lovable-AIG-SDK": "vercel-ai-sdk" },
+    fetch: createAiGatewayRunIdFetch(),
   });
 
   try {
