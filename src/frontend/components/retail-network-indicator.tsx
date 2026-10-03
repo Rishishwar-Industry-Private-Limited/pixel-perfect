@@ -1,38 +1,38 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { MapPin, Store } from "lucide-react";
-import { retailNetwork, storeFigure } from "@/frontend/data/retail-network";
+import { retailNetwork } from "@/frontend/data/retail-network";
 
-export function RetailNetworkIndicator() {
-  const [state, setState] = useState("");
-  const [area, setArea] = useState("");
-  const [district, setDistrict] = useState("");
+export type NetworkSelection = { state: string; area: string; district: string };
+
+export function RetailNetworkIndicator({ selection, onChange, count }: {
+  selection: NetworkSelection;
+  onChange: (selection: NetworkSelection) => void;
+  count: number;
+}) {
+  const { state, area, district } = selection;
 
   const states = useMemo(() => [...new Set(retailNetwork.map((row) => row.state))].sort(), []);
   const areas = useMemo(() => [...new Set(retailNetwork.filter((row) => !state || row.state === state).map((row) => row.area))].sort(), [state]);
   const districts = useMemo(() => [...new Set(retailNetwork.filter((row) => (!state || row.state === state) && (!area || row.area === area)).map((row) => row.district))].sort(), [state, area]);
-  const matches = retailNetwork.filter((row) => (!state || row.state === state) && (!area || row.area === area) && (!district || row.district === district));
-  const count = matches.reduce((total, row) => total + row.stores, 0);
-
-  const onState = (value: string) => { setState(value); setArea(""); setDistrict(""); };
+  const onState = (value: string) => onChange({ state: value, area: "", district: "" });
   const onArea = (value: string) => {
-    setArea(value);
-    setDistrict("");
-    if (value && !state) setState(retailNetwork.find((row) => row.area === value)?.state ?? "");
+    onChange({ state: value && !state ? retailNetwork.find((row) => row.area === value)?.state ?? "" : state, area: value, district: "" });
   };
   const onDistrict = (value: string) => {
-    setDistrict(value);
     if (value) {
       const row = retailNetwork.find((entry) => entry.district === value && (!state || entry.state === state) && (!area || entry.area === area));
-      if (row) { setState(row.state); setArea(row.area); }
+      if (row) onChange({ state: row.state, area: row.area, district: value });
+    } else {
+      onChange({ ...selection, district: "" });
     }
   };
 
   return (
-    <section className="border-b border-border bg-background py-5 sm:py-6" aria-labelledby="network-title">
-      <div className="page-shell">
-        <div className="mb-4 flex min-w-0 items-center gap-2 sm:mb-3">
+    <section className="border-b border-border bg-background py-5 lg:py-3" aria-labelledby="network-title">
+      <div className="page-shell lg:grid lg:grid-cols-[230px_minmax(0,1fr)] lg:items-center lg:gap-6">
+        <div className="mb-4 flex min-w-0 items-center gap-2 lg:mb-0">
           <MapPin className="size-5 shrink-0 text-primary" aria-hidden="true" />
-          <h2 id="network-title" className="text-lg sm:text-xl">Check Our Retail Store Network</h2>
+          <h2 id="network-title" className="text-lg leading-snug">Check Our Retail Store Network</h2>
         </div>
         <div className="grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-4">
           <label className="min-w-0 text-xs font-semibold uppercase tracking-wide text-muted-foreground">State
@@ -58,7 +58,6 @@ export function RetailNetworkIndicator() {
             <p className="mt-1 flex items-center gap-2 font-display text-2xl leading-10 text-foreground"><Store className="size-5 shrink-0 text-primary" aria-hidden="true" />{count.toLocaleString("en-IN")}</p>
           </div>
         </div>
-        <p className="mt-2 text-xs text-muted-foreground">Figures cover the listed districts. Site-wide store figures are rounded down to the nearest 50 with a + sign.</p>
       </div>
     </section>
   );

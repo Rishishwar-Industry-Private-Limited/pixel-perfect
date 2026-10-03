@@ -84,6 +84,7 @@ export function SiteFooter() {
             <li><Link to="/fund-your-business" className="hover:text-primary">Fund Your Business</Link></li>
             <li><Link to="/retailer-partner" className="hover:text-primary">Retail Partner</Link></li>
             <li><Link to="/register-your-store" className="hover:text-primary">Register Your Store</Link></li>
+            <li><Link to="/payment" className="hover:text-primary">Payment Details</Link></li>
           </ul>
         </nav>
         <div className="col-span-2 md:col-span-1">

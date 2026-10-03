@@ -24,3 +24,4 @@
 - Backend uses no Supabase/Cloud; enquiries are sent by email via Lovable Emails — user explicitly rejected Supabase.
 - AI enquiry guidance uses a public validated server function and a server-only Lovable AI Gateway client; no customer input is persisted — keeps the feature private and consistent with the no-database requirement.
 - Retail network counts come from the supplied district-level master in src/frontend/data/retail-network.json and shared selectors/totals, not manually repeated copy — keeps every page aligned with the source data.
+- Payment instructions live in the client-side payment feature data, with incomplete accounts shown as unavailable instead of guessed — avoids publishing fabricated bank details.
