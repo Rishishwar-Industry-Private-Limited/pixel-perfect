@@ -17,6 +17,7 @@ import { Route as GlobalPresenceRouteImport } from './routes/global-presence'
 import { Route as ManufacturersRouteImport } from './routes/manufacturers'
 import { Route as OurServicesRouteImport } from './routes/our-services'
 import { Route as PartnerWithUsRouteImport } from './routes/partner-with-us'
+import { Route as PaymentRouteImport } from './routes/payment'
 import { Route as RegisterYourStoreRouteImport } from './routes/register-your-store'
 import { Route as RetailerPartnerRouteImport } from './routes/retailer-partner'
 
@@ -60,6 +61,11 @@ const PartnerWithUsRoute = PartnerWithUsRouteImport.update({
   path: '/partner-with-us',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PaymentRoute = PaymentRouteImport.update({
+  id: '/payment',
+  path: '/payment',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RegisterYourStoreRoute = RegisterYourStoreRouteImport.update({
   id: '/register-your-store',
   path: '/register-your-store',
@@ -80,6 +86,7 @@ export interface FileRoutesByFullPath {
   '/manufacturers': typeof ManufacturersRoute
   '/our-services': typeof OurServicesRoute
   '/partner-with-us': typeof PartnerWithUsRoute
+  '/payment': typeof PaymentRoute
   '/register-your-store': typeof RegisterYourStoreRoute
   '/retailer-partner': typeof RetailerPartnerRoute
 }
@@ -92,6 +99,7 @@ export interface FileRoutesByTo {
   '/manufacturers': typeof ManufacturersRoute
   '/our-services': typeof OurServicesRoute
   '/partner-with-us': typeof PartnerWithUsRoute
+  '/payment': typeof PaymentRoute
   '/register-your-store': typeof RegisterYourStoreRoute
   '/retailer-partner': typeof RetailerPartnerRoute
 }
@@ -105,6 +113,7 @@ export interface FileRoutesById {
   '/manufacturers': typeof ManufacturersRoute
   '/our-services': typeof OurServicesRoute
   '/partner-with-us': typeof PartnerWithUsRoute
+  '/payment': typeof PaymentRoute
   '/register-your-store': typeof RegisterYourStoreRoute
   '/retailer-partner': typeof RetailerPartnerRoute
 }
@@ -119,6 +128,7 @@ export interface FileRouteTypes {
     | '/manufacturers'
     | '/our-services'
     | '/partner-with-us'
+    | '/payment'
     | '/register-your-store'
     | '/retailer-partner'
   fileRoutesByTo: FileRoutesByTo
@@ -131,6 +141,7 @@ export interface FileRouteTypes {
     | '/manufacturers'
     | '/our-services'
     | '/partner-with-us'
+    | '/payment'
     | '/register-your-store'
     | '/retailer-partner'
   id:
@@ -143,6 +154,7 @@ export interface FileRouteTypes {
     | '/manufacturers'
     | '/our-services'
     | '/partner-with-us'
+    | '/payment'
     | '/register-your-store'
     | '/retailer-partner'
   fileRoutesById: FileRoutesById
@@ -156,6 +168,7 @@ export interface RootRouteChildren {
   ManufacturersRoute: typeof ManufacturersRoute
   OurServicesRoute: typeof OurServicesRoute
   PartnerWithUsRoute: typeof PartnerWithUsRoute
+  PaymentRoute: typeof PaymentRoute
   RegisterYourStoreRoute: typeof RegisterYourStoreRoute
   RetailerPartnerRoute: typeof RetailerPartnerRoute
 }
@@ -218,6 +231,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PartnerWithUsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/payment': {
+      id: '/payment'
+      path: '/payment'
+      fullPath: '/payment'
+      preLoaderRoute: typeof PaymentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/register-your-store': {
       id: '/register-your-store'
       path: '/register-your-store'
@@ -244,6 +264,7 @@ const rootRouteChildren: RootRouteChildren = {
   ManufacturersRoute: ManufacturersRoute,
   OurServicesRoute: OurServicesRoute,
   PartnerWithUsRoute: PartnerWithUsRoute,
+  PaymentRoute: PaymentRoute,
   RegisterYourStoreRoute: RegisterYourStoreRoute,
   RetailerPartnerRoute: RetailerPartnerRoute,
 }
