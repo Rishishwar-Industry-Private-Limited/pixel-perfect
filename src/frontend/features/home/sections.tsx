@@ -4,11 +4,11 @@ import heroBgAsset from "@/frontend/assets/hero-bg.webp";
 import handshakeImage from "@/frontend/assets/cta-handshake.jpg";
 import { SiteFooter, SiteHeader } from "@/frontend/components/site-chrome";
 import { Button } from "@/frontend/components/ui/button";
-import { districtFigure, totalStoreFigure } from "@/frontend/data/retail-network";
+import { storeFigure } from "@/frontend/data/retail-network";
 
 import { services, steps } from "./content";
 
-export function HeroSection() {
+export function HeroSection({ storeCount, districtCount }: { storeCount: number; districtCount: number }) {
   return (
     <section className="dark-surface relative overflow-hidden border-b border-border sm:h-[calc(100svh-272px)] sm:min-h-[568px] sm:max-h-[830px]">
       <img src={heroBgAsset} alt="Rishishwar Industry representative inside an FMCG retail store" className="absolute inset-0 size-full object-cover object-[62%_center]" />
@@ -21,7 +21,7 @@ export function HeroSection() {
           <div className="mt-8 grid gap-3 sm:mt-9 sm:flex sm:flex-wrap sm:gap-4"><Button asChild size="lg" className="w-full sm:w-auto"><Link to="/manufacturers">For Manufacturers <ArrowRight /></Link></Button><Button asChild size="lg" variant="outline" className="w-full border-ink-foreground/30 text-ink-foreground sm:w-auto"><Link to="/our-services">Explore Services</Link></Button></div>
         </div>
         <dl className="mt-10 grid grid-cols-2 border border-border bg-ink/75 backdrop-blur-md sm:absolute sm:bottom-8 sm:right-6 sm:mt-0 sm:w-[520px] sm:grid-cols-4 lg:right-8">
-          {[[totalStoreFigure,"Retail Stores"],[districtFigure,"Districts Covered"],["8","Countries"],["End-to-End","Support"]].map(([v,l]) => <div key={l} className="border-r border-border p-4 last:border-r-0"><dt className="font-display text-xl text-accent-foreground">{v}</dt><dd className="mt-1 text-[10px] uppercase tracking-wider text-ink-foreground/50">{l}</dd></div>)}
+          {[[storeFigure(storeCount),"Retail Stores"],[String(districtCount),"Districts Covered"],["8","Countries"],["End-to-End","Support"]].map(([v,l]) => <div key={l} className="border-r border-border p-4 last:border-r-0"><dt className="font-display text-xl text-accent-foreground">{v}</dt><dd className="mt-1 text-[10px] uppercase tracking-wider text-ink-foreground/50">{l}</dd></div>)}
         </dl>
       </div>
     </section>

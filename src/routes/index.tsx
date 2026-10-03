@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteFooter, SiteHeader } from "@/frontend/components/site-chrome";
-import { HeroSection, CapabilitiesSection, ProcessSection, CtaSection } from "@/frontend/features/home/sections";
-import { RetailNetworkIndicator } from "@/frontend/components/retail-network-indicator";
+import { CapabilitiesSection, ProcessSection, CtaSection } from "@/frontend/features/home/sections";
+import { HomeNetwork } from "@/frontend/features/home/network";
 import { districtFigure, totalStoreFigure } from "@/frontend/data/retail-network";
 
 export const Route = createFileRoute("/")({
@@ -19,8 +19,7 @@ function HomePage() {
     <div className="min-h-screen bg-background">
       <SiteHeader />
       <main>
-        <HeroSection />
-        <RetailNetworkIndicator />
+        <HomeNetwork />
         <CapabilitiesSection />
         <ProcessSection />
         <CtaSection />
