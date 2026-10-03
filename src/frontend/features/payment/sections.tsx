@@ -9,8 +9,8 @@ export function PaymentDetails() {
   const [copied, setCopied] = useState("");
   const account = paymentAccounts.find((item) => item.id === selectedId) ?? paymentAccounts[0];
   const countries = [...new Map(paymentAccounts.map((item) => [item.country, item])).values()];
-  const methods = paymentAccounts.filter((item) => item.country === account.country);
-  const complete = account.id !== "sg";
+  const methods = paymentAccounts.filter((item) => item.country === account?.country);
+  const complete = account?.id !== "sg";
 
   async function copy(value: string, label: string) {
     try {
@@ -19,6 +19,8 @@ export function PaymentDetails() {
       window.setTimeout(() => setCopied(""), 2000);
     } catch { setCopied(""); }
   }
+
+  if (!account) return null;
 
   return (
     <main className="min-h-screen bg-background">
