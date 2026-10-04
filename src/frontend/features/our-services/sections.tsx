@@ -80,7 +80,7 @@ export function ServicesDetailSection() {
               What We <span className="text-primary">Do For You</span>
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Six services, one goal: getting your products into customers' hands — profitably and at scale.
+               Seven services, one goal: getting your products into customers' hands — profitably and at scale.
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -100,6 +100,7 @@ export function ServicesDetailSection() {
                     </li>
                   ))}
                 </ul>
+                 {id === "shop-advertising" && <Button asChild variant="outline" className="mt-6 self-start"><Link to="/advertise-your-product">Explore advertising <ArrowRight aria-hidden="true" /></Link></Button>}
               </article>
             ))}
           </div>

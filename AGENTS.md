@@ -23,5 +23,6 @@
 - src/routes, src/lib, router/start files stay at src/ root because the framework requires them there.
 - Backend uses no Supabase/Cloud; enquiries are sent by email via Lovable Emails — user explicitly rejected Supabase.
 - AI enquiry guidance uses a public validated server function and a server-only Lovable AI Gateway client; no customer input is persisted — keeps the feature private and consistent with the no-database requirement.
-- Retail network counts come from the supplied district-level master in src/frontend/data/retail-network.json and shared selectors/totals, not manually repeated copy — keeps every page aligned with the source data.
+- Retail network counts and public district browsing come from the supplied district-level master in src/frontend/data/retail-network.json via shared positive-store selectors/totals, not manually repeated copy — keeps pages aligned while hiding districts until stores arrive.
+- The Global Presence overview renders an Outlet for child market URLs rather than its overview at those URLs — keeps individual market pages visible without duplicate page chrome.
 - Payment instructions live in the client-side payment feature data, with incomplete accounts shown as unavailable instead of guessed — avoids publishing fabricated bank details.

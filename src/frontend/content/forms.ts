@@ -50,3 +50,14 @@ export const mfgFields: FormField[] = [
   { k: "gst", l: "GST Number", t: "text", optional: true },
   { k: "message", l: "About Your Products / Requirement", t: "textarea", optional: true },
 ];
+
+export const advertisingFields: FormField[] = [
+  { k: "name", l: "Contact Name", t: "text" },
+  { k: "company", l: "Company / Brand", t: "text" },
+  { k: "phone", l: "Mobile Number", t: "tel" },
+  { k: "email", l: "Business Email", t: "email" },
+  { k: "product", l: "Product Category", t: "text" },
+  { k: "format", l: "Preferred Format", t: "select", opts: ["Silent 10–20 second video", "Static illuminated sign board", "Both formats"] },
+  { k: "markets", l: "Preferred States / Areas", t: "text", optional: true, wide: true },
+  { k: "message", l: "Campaign Requirement", t: "textarea", rows: 4, wide: true },
+];

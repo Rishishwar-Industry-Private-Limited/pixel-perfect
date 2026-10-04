@@ -1,14 +1,12 @@
-# Hero Showcase Builder
+# Task Completion Companion
 
-wb site banao hero section ka alag SE mene diya hai image wo banana hai
+import this project and compalete pending tasks
 
 This project was built with [Lovable](https://lovable.dev).
 
-**Live app**: https://epic-hero-layout.lovable.app
-
 ## Build with Lovable
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/05e9d43b-7332-45eb-8bd6-d5881ad104a0).
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/4d5dcb3f-6374-4bd9-9e6a-c3023ee6a7c5).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
 - **Stay in sync**: every change made in Lovable is committed straight to this repository.

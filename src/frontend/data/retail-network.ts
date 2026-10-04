@@ -1,6 +1,8 @@
 import rows from "./retail-network.json";
 
-export const retailNetwork = rows;
+// Keep the master intact; only locations with stores appear in public browsing.
+// When a district gains stores in the master, it appears automatically.
+export const retailNetwork = rows.filter((row) => row.stores > 0);
 
 export const networkStores = retailNetwork.reduce((total, row) => total + row.stores, 0);
 export const networkDistricts = new Set(retailNetwork.map((row) => `${row.state}:${row.district}`)).size;

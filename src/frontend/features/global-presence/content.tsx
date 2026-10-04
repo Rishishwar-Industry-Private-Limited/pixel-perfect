@@ -1,4 +1,3 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
 import { districtFigure, totalStoreFigure } from "@/frontend/data/retail-network";
 import {
   ArrowRight,
@@ -13,7 +12,6 @@ import {
   MapPin,
   ShieldCheck,
 } from "lucide-react";
-import { SiteHeader, SiteFooter } from "@/frontend/components/site-chrome";
 import heroGlobe from "@/frontend/assets/gp-india-globe.webp";
 import shipImg from "@/frontend/assets/gp-ship.webp";
 import imgIndia from "@/frontend/assets/gp-india-gate.webp";
@@ -35,14 +33,14 @@ export const heroStats = [
 ];
 
 export const countries = [
-  { name: "India", flag: "🇮🇳", img: imgIndia, note: `${totalStoreFigure} retail stores across ${districtFigure} districts` },
-  { name: "Australia", flag: "🇦🇺", img: imgAustralia, note: "Growing FMCG market opportunities" },
-  { name: "USA", flag: "🇺🇸", img: imgUsa, note: "Expanding Indian brands in key cities" },
-  { name: "Canada", flag: "🇨🇦", img: imgCanada, note: "Building retail and distribution networks" },
-  { name: "UAE", flag: "🇦🇪", img: imgUae, note: "Supporting market entry and distribution" },
-  { name: "Singapore", flag: "🇸🇬", img: imgSingapore, note: "Partnerships with leading distributors" },
-  { name: "UK", flag: "🇬🇧", img: imgUk, note: "Connecting with retail and e-commerce" },
-  { name: "Europe", flag: "🇪🇺", img: imgEurope, note: "Exploring new markets across Europe" },
+  { name: "India", slug: "india", flag: "🇮🇳", img: imgIndia, note: `${totalStoreFigure} retail stores across ${districtFigure} districts` },
+  { name: "Australia", slug: "australia", flag: "🇦🇺", img: imgAustralia, note: "Growing FMCG market opportunities" },
+  { name: "USA", slug: "usa", flag: "🇺🇸", img: imgUsa, note: "Expanding Indian brands in key cities" },
+  { name: "Canada", slug: "canada", flag: "🇨🇦", img: imgCanada, note: "Building retail and distribution networks" },
+  { name: "UAE", slug: "uae", flag: "🇦🇪", img: imgUae, note: "Supporting market entry and distribution" },
+  { name: "Singapore", slug: "singapore", flag: "🇸🇬", img: imgSingapore, note: "Partnerships with leading distributors" },
+  { name: "UK", slug: "uk", flag: "🇬🇧", img: imgUk, note: "Connecting with retail and e-commerce" },
+  { name: "Europe", slug: "europe", flag: "🇪🇺", img: imgEurope, note: "Exploring new markets across Europe" },
 ];
 
 export const support = [

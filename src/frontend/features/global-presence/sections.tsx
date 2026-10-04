@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   Box,
@@ -12,7 +12,6 @@ import {
   MapPin,
   ShieldCheck,
 } from "lucide-react";
-import { SiteHeader, SiteFooter } from "@/frontend/components/site-chrome";
 import heroGlobe from "@/frontend/assets/gp-india-globe.webp";
 import shipImg from "@/frontend/assets/gp-ship.webp";
 import imgIndia from "@/frontend/assets/gp-india-gate.webp";
@@ -95,12 +94,12 @@ export function CountriesSection() {
                 manufacturers expand their reach with reliable distribution
                 networks, local partnerships and market support.
               </p>
-              <Link
-                to="/contact"
+              <a
+                href="#market-links"
                 className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
               >
-                View Opportunities <ArrowRight className="size-4" />
-              </Link>
+                View Markets <ArrowRight className="size-4" />
+              </a>
             </div>
             <img
               src={worldMap}
@@ -112,10 +111,12 @@ export function CountriesSection() {
             />
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div id="market-links" className="mt-12 grid scroll-mt-24 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {countries.map((c) => (
-              <article
+              <Link
                 key={c.name}
+                to="/global-presence/$market"
+                params={{ market: c.slug }}
                  className="group overflow-hidden rounded-sm border border-border bg-card card-lift"
               >
                 <div className="relative aspect-[16/10]">
@@ -142,7 +143,7 @@ export function CountriesSection() {
                     <ArrowRight className="size-3.5" />
                   </span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </section>
@@ -164,7 +165,7 @@ export function EndToEndSupportSection() {
                 <span className="text-primary">International Markets</span>
               </h2>
             </div>
-            <div className="mt-12 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-6">
+            <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-3 lg:grid-cols-6">
               {support.map((s) => (
                 <div key={s.title} className="text-center">
                   <s.icon className="mx-auto size-9 text-primary" strokeWidth={1.6} />

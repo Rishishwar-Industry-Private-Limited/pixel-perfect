@@ -36,7 +36,7 @@ function PartnerPage() {
          <section className="cinematic-section border-b border-border bg-ink px-4 text-ink-foreground sm:px-6">
           <div className="mx-auto max-w-4xl text-center">
              <p className="royal-label justify-center">Partnership Registration</p>
-              <h1 className="mt-6 text-4xl sm:text-7xl">Partner <span className="text-accent-foreground">With Us</span></h1>
+              <h1 className="mt-6 text-4xl sm:text-6xl lg:text-7xl">Partner <span className="text-accent-foreground">With Us</span></h1>
             <p className="mx-auto mt-4 max-w-2xl text-ink-foreground/75">Retail store ho ya FMCG manufacturer — neeche apni category chuniye, form bhariye, aur hamari team aapse agle steps ke liye contact karegi.</p>
           </div>
         </section>

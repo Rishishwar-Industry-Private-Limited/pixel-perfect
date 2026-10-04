@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { MapPin, Store } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { retailNetwork } from "@/frontend/data/retail-network";
 
 export type NetworkSelection = { state: string; area: string; district: string };
@@ -16,7 +17,7 @@ export function RetailNetworkIndicator({ selection, onChange, count }: {
   const districts = useMemo(() => [...new Set(retailNetwork.filter((row) => (!state || row.state === state) && (!area || row.area === area)).map((row) => row.district))].sort(), [state, area]);
   const onState = (value: string) => onChange({ state: value, area: "", district: "" });
   const onArea = (value: string) => {
-    onChange({ state: value && !state ? retailNetwork.find((row) => row.area === value)?.state ?? "" : state, area: value, district: "" });
+    onChange({ state, area: value, district: "" });
   };
   const onDistrict = (value: string) => {
     if (value) {
@@ -34,7 +35,7 @@ export function RetailNetworkIndicator({ selection, onChange, count }: {
           <MapPin className="size-5 shrink-0 text-primary" aria-hidden="true" />
           <h2 id="network-title" className="text-lg leading-snug">Check Our Retail Store Network</h2>
         </div>
-        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-4">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
           <label className="min-w-0 text-xs font-semibold uppercase tracking-wide text-muted-foreground">State
             <select aria-label="State" value={state} onChange={(event) => onState(event.target.value)} className="mt-1.5 h-11 w-full min-w-0 rounded-sm border border-border bg-card px-2 text-sm font-medium normal-case tracking-normal text-foreground sm:px-3">
               <option value="">All states</option>
@@ -53,10 +54,11 @@ export function RetailNetworkIndicator({ selection, onChange, count }: {
               {districts.map((value) => <option key={value} value={value}>{value}</option>)}
             </select>
           </label>
-          <div className="min-w-0 border-l-2 border-primary pl-3" aria-live="polite" aria-label="Retail stores in selected location">
+          <Link to="/store-list" search={selection} className="min-w-0 border-l-2 border-primary pl-3 transition-colors hover:text-primary" aria-live="polite" aria-label="View retail network list for selected location">
             <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Retail stores</p>
             <p className="mt-1 flex items-center gap-2 font-display text-2xl leading-10 text-foreground"><Store className="size-5 shrink-0 text-primary" aria-hidden="true" />{count.toLocaleString("en-IN")}</p>
-          </div>
+            <span className="text-xs text-primary">View network list</span>
+          </Link>
         </div>
       </div>
     </section>

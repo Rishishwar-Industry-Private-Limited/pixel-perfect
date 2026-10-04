@@ -11,7 +11,7 @@ export function HomeNetwork() {
     (!selection.district || row.district === selection.district),
   );
   const count = matches.reduce((sum, row) => sum + row.stores, 0);
-  const districts = new Set(matches.map((row) => `${row.state}:${row.district}`)).size;
+  const districts = new Set(matches.filter((row) => row.stores > 0).map((row) => `${row.state}:${row.district}`)).size;
 
   return (
     <>

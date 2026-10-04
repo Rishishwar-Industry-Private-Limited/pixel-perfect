@@ -4,6 +4,7 @@ import { Globe2, Mail, Menu, Moon, Sun, X } from "lucide-react";
 import logoAsset from "@/frontend/assets/rishishwar-logo.webp";
 import { Button } from "@/frontend/components/ui/button";
 import { COMPANY } from "@/frontend/content/company";
+import { countries } from "@/frontend/features/global-presence/content";
 
 export const navLinks = [
   { to: "/", label: "Home" },
@@ -51,7 +52,7 @@ export function SiteHeader() {
         </div>
       </div>
       {open && (
-        <nav aria-label="Mobile navigation" className="border-t border-border bg-ink px-4 py-5 xl:hidden">
+        <nav aria-label="Mobile navigation" className="max-h-[calc(100svh-72px)] overflow-y-auto border-t border-border bg-ink px-4 py-5 shadow-2xl xl:hidden">
           <div className="mx-auto grid max-w-7xl gap-1">
             {navLinks.map((link) => <Link key={link.to} to={link.to} onClick={() => setOpen(false)} className={`border-l px-4 py-3 font-display text-sm font-medium uppercase tracking-wider ${pathname === link.to ? "border-primary bg-primary/10 text-primary" : "border-transparent text-ink-foreground/75"}`}>{link.label}</Link>)}
           </div>
@@ -84,6 +85,8 @@ export function SiteFooter() {
             <li><Link to="/fund-your-business" className="hover:text-primary">Fund Your Business</Link></li>
             <li><Link to="/retailer-partner" className="hover:text-primary">Retail Partner</Link></li>
             <li><Link to="/register-your-store" className="hover:text-primary">Register Your Store</Link></li>
+            <li><Link to="/store-list" search={{ state: "", area: "", district: "" }} className="hover:text-primary">Retail Network List</Link></li>
+            <li><Link to="/advertise-your-product" className="hover:text-primary">Advertise Your Product</Link></li>
             <li><Link to="/payment" className="hover:text-primary">Payment Details</Link></li>
           </ul>
         </nav>
@@ -93,6 +96,12 @@ export function SiteFooter() {
             <li><a href={`mailto:${COMPANY.email}`} className="flex items-start gap-3 break-all hover:text-primary"><Mail className="mt-0.5 size-4 shrink-0 text-primary" />{COMPANY.email}</a></li>
           </ul>
         </div>
+        <nav aria-label="Global market links" className="col-span-2 border-t border-border pt-8 lg:col-span-4">
+          <h3 className="text-sm uppercase tracking-wider text-accent-foreground">Global Markets</h3>
+          <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 text-sm text-ink-foreground/60 sm:grid-cols-4 lg:grid-cols-8">
+            {countries.map((country) => <li key={country.slug}><Link to="/global-presence/$market" params={{ market: country.slug }} className="transition-colors hover:text-primary">{country.name}</Link></li>)}
+          </ul>
+        </nav>
       </div>
       <div className="border-t border-border">
         <div className="page-shell flex flex-col gap-2 py-5 text-xs text-ink-foreground/45 sm:flex-row sm:items-center sm:justify-between">

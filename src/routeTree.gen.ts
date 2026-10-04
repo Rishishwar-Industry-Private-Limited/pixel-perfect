@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AdvertiseYourProductRouteImport } from './routes/advertise-your-product'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FundYourBusinessRouteImport } from './routes/fund-your-business'
 import { Route as GlobalPresenceRouteImport } from './routes/global-presence'
@@ -20,6 +21,8 @@ import { Route as PartnerWithUsRouteImport } from './routes/partner-with-us'
 import { Route as PaymentRouteImport } from './routes/payment'
 import { Route as RegisterYourStoreRouteImport } from './routes/register-your-store'
 import { Route as RetailerPartnerRouteImport } from './routes/retailer-partner'
+import { Route as StoreListRouteImport } from './routes/store-list'
+import { Route as GlobalPresenceMarketRouteImport } from './routes/global-presence.$market'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -29,6 +32,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdvertiseYourProductRoute = AdvertiseYourProductRouteImport.update({
+  id: '/advertise-your-product',
+  path: '/advertise-your-product',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -76,52 +84,72 @@ const RetailerPartnerRoute = RetailerPartnerRouteImport.update({
   path: '/retailer-partner',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StoreListRoute = StoreListRouteImport.update({
+  id: '/store-list',
+  path: '/store-list',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GlobalPresenceMarketRoute = GlobalPresenceMarketRouteImport.update({
+  id: '/$market',
+  path: '/$market',
+  getParentRoute: () => GlobalPresenceRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/advertise-your-product': typeof AdvertiseYourProductRoute
   '/contact': typeof ContactRoute
   '/fund-your-business': typeof FundYourBusinessRoute
-  '/global-presence': typeof GlobalPresenceRoute
+  '/global-presence': typeof GlobalPresenceRouteWithChildren
   '/manufacturers': typeof ManufacturersRoute
   '/our-services': typeof OurServicesRoute
   '/partner-with-us': typeof PartnerWithUsRoute
   '/payment': typeof PaymentRoute
   '/register-your-store': typeof RegisterYourStoreRoute
   '/retailer-partner': typeof RetailerPartnerRoute
+  '/store-list': typeof StoreListRoute
+  '/global-presence/$market': typeof GlobalPresenceMarketRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/advertise-your-product': typeof AdvertiseYourProductRoute
   '/contact': typeof ContactRoute
   '/fund-your-business': typeof FundYourBusinessRoute
-  '/global-presence': typeof GlobalPresenceRoute
+  '/global-presence': typeof GlobalPresenceRouteWithChildren
   '/manufacturers': typeof ManufacturersRoute
   '/our-services': typeof OurServicesRoute
   '/partner-with-us': typeof PartnerWithUsRoute
   '/payment': typeof PaymentRoute
   '/register-your-store': typeof RegisterYourStoreRoute
   '/retailer-partner': typeof RetailerPartnerRoute
+  '/store-list': typeof StoreListRoute
+  '/global-presence/$market': typeof GlobalPresenceMarketRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/advertise-your-product': typeof AdvertiseYourProductRoute
   '/contact': typeof ContactRoute
   '/fund-your-business': typeof FundYourBusinessRoute
-  '/global-presence': typeof GlobalPresenceRoute
+  '/global-presence': typeof GlobalPresenceRouteWithChildren
   '/manufacturers': typeof ManufacturersRoute
   '/our-services': typeof OurServicesRoute
   '/partner-with-us': typeof PartnerWithUsRoute
   '/payment': typeof PaymentRoute
   '/register-your-store': typeof RegisterYourStoreRoute
   '/retailer-partner': typeof RetailerPartnerRoute
+  '/store-list': typeof StoreListRoute
+  '/global-presence/$market': typeof GlobalPresenceMarketRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
+    | '/advertise-your-product'
     | '/contact'
     | '/fund-your-business'
     | '/global-presence'
@@ -131,10 +159,13 @@ export interface FileRouteTypes {
     | '/payment'
     | '/register-your-store'
     | '/retailer-partner'
+    | '/store-list'
+    | '/global-presence/$market'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/advertise-your-product'
     | '/contact'
     | '/fund-your-business'
     | '/global-presence'
@@ -144,10 +175,13 @@ export interface FileRouteTypes {
     | '/payment'
     | '/register-your-store'
     | '/retailer-partner'
+    | '/store-list'
+    | '/global-presence/$market'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/advertise-your-product'
     | '/contact'
     | '/fund-your-business'
     | '/global-presence'
@@ -157,20 +191,24 @@ export interface FileRouteTypes {
     | '/payment'
     | '/register-your-store'
     | '/retailer-partner'
+    | '/store-list'
+    | '/global-presence/$market'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AdvertiseYourProductRoute: typeof AdvertiseYourProductRoute
   ContactRoute: typeof ContactRoute
   FundYourBusinessRoute: typeof FundYourBusinessRoute
-  GlobalPresenceRoute: typeof GlobalPresenceRoute
+  GlobalPresenceRoute: typeof GlobalPresenceRouteWithChildren
   ManufacturersRoute: typeof ManufacturersRoute
   OurServicesRoute: typeof OurServicesRoute
   PartnerWithUsRoute: typeof PartnerWithUsRoute
   PaymentRoute: typeof PaymentRoute
   RegisterYourStoreRoute: typeof RegisterYourStoreRoute
   RetailerPartnerRoute: typeof RetailerPartnerRoute
+  StoreListRoute: typeof StoreListRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -187,6 +225,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/advertise-your-product': {
+      id: '/advertise-your-product'
+      path: '/advertise-your-product'
+      fullPath: '/advertise-your-product'
+      preLoaderRoute: typeof AdvertiseYourProductRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -252,21 +297,49 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RetailerPartnerRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/store-list': {
+      id: '/store-list'
+      path: '/store-list'
+      fullPath: '/store-list'
+      preLoaderRoute: typeof StoreListRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/global-presence/$market': {
+      id: '/global-presence/$market'
+      path: '/$market'
+      fullPath: '/global-presence/$market'
+      preLoaderRoute: typeof GlobalPresenceMarketRouteImport
+      parentRoute: typeof GlobalPresenceRoute
+    }
   }
 }
+
+interface GlobalPresenceRouteChildren {
+  GlobalPresenceMarketRoute: typeof GlobalPresenceMarketRoute
+}
+
+const GlobalPresenceRouteChildren: GlobalPresenceRouteChildren = {
+  GlobalPresenceMarketRoute: GlobalPresenceMarketRoute,
+}
+
+const GlobalPresenceRouteWithChildren = GlobalPresenceRoute._addFileChildren(
+  GlobalPresenceRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AdvertiseYourProductRoute: AdvertiseYourProductRoute,
   ContactRoute: ContactRoute,
   FundYourBusinessRoute: FundYourBusinessRoute,
-  GlobalPresenceRoute: GlobalPresenceRoute,
+  GlobalPresenceRoute: GlobalPresenceRouteWithChildren,
   ManufacturersRoute: ManufacturersRoute,
   OurServicesRoute: OurServicesRoute,
   PartnerWithUsRoute: PartnerWithUsRoute,
   PaymentRoute: PaymentRoute,
   RegisterYourStoreRoute: RegisterYourStoreRoute,
   RetailerPartnerRoute: RetailerPartnerRoute,
+  StoreListRoute: StoreListRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
