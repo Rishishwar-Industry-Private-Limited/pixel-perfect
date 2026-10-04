@@ -58,7 +58,7 @@ function ContactPage() {
             <p className="royal-label">
               Contact Us
             </p>
-            <h1 className="mt-6 max-w-3xl text-4xl leading-[1.02] sm:text-7xl">
+            <h1 className="mt-6 max-w-3xl text-4xl leading-[1.02] sm:text-6xl lg:text-7xl">
               Let's Build Your{" "}
               <span className="text-primary">Market Together</span>
             </h1>

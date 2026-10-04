@@ -4,6 +4,7 @@ import { Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   Store,
+  MonitorPlay,
   Users,
   Truck,
   Globe,
@@ -48,6 +49,18 @@ export const services: Service[] = [
       "Placement across grocery, kirana and modern trade counters",
       "Location and area-based store matching for your products",
       "Ongoing retail relationship management",
+    ],
+  },
+  {
+    id: "shop-advertising",
+    icon: MonitorPlay,
+    title: "Shop Network Advertising",
+    tagline: "Reach shoppers at participating stores",
+    text: "Show your product close to the point of purchase with shop-level advertising formats tailored to your campaign.",
+    points: [
+      "Silent 10–20 second video creatives without music or audio",
+      "Static illuminated sign-board placements",
+      "Locations, creative approval and commercial terms confirmed after enquiry",
     ],
   },
   {

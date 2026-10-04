@@ -36,7 +36,7 @@ export function AboutHero() {
             <p className="royal-label">
             About Rishishwar Industry
           </p>
-            <h1 className="mt-6 text-4xl leading-[1.02] sm:text-7xl">
+            <h1 className="mt-6 text-4xl leading-[1.02] sm:text-6xl lg:text-7xl">
             Driven by Markets.
              <span className="block text-accent-foreground">Built for Manufacturers.</span>
           </h1>

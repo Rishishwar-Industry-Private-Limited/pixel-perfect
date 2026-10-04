@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteFooter, SiteHeader } from "@/frontend/components/site-chrome";
 import { CapabilitiesSection, ProcessSection, CtaSection } from "@/frontend/features/home/sections";
 import { HomeNetwork } from "@/frontend/features/home/network";
+import { ServiceGuide } from "@/frontend/features/home/service-guide";
 import { districtFigure, totalStoreFigure } from "@/frontend/data/retail-network";
 
 export const Route = createFileRoute("/")({
@@ -21,6 +22,7 @@ function HomePage() {
       <main>
         <HomeNetwork />
         <CapabilitiesSection />
+        <ServiceGuide />
         <ProcessSection />
         <CtaSection />
       </main>

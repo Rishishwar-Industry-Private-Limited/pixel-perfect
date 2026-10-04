@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Outlet, useRouterState } from "@tanstack/react-router";
 import { SiteHeader, SiteFooter } from "@/frontend/components/site-chrome";
 import { HeroSection, CountriesSection, EndToEndSupportSection, BiggerMarketsSection, CtaSection } from "@/frontend/features/global-presence/sections";
 
@@ -31,6 +31,8 @@ export const Route = createFileRoute("/global-presence")({
 });
 
 function GlobalPresencePage() {
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+  if (pathname.startsWith("/global-presence/")) return <Outlet />;
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
