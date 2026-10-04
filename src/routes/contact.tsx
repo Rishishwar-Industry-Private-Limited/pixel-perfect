@@ -72,7 +72,12 @@ function ContactPage() {
 
         <EnquiryChecklist />
         <section className="page-shell py-14 sm:py-28">
-          <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
+          <div className="mx-auto max-w-3xl space-y-10">
+            <div className="rounded-sm border bg-card p-6 sm:p-8">
+              <h2 className="mb-6 text-2xl">Send Us a Message</h2>
+              <EmailForm fields={contactFields} subject="Partnership Enquiry" intro="I would like to discuss a partnership." submitLabel="Send via Email" successText="Email app khul gaya hai — message send karke enquiry complete karein." />
+            </div>
+
             <div className="space-y-6">
               {contactCards.map((c) => {
                 const inner = (
@@ -105,11 +110,6 @@ function ContactPage() {
                   </div>
                 );
               })}
-            </div>
-
-            <div className="rounded-sm border bg-card p-6 sm:p-8">
-              <h2 className="mb-6 text-2xl">Send Us a Message</h2>
-              <EmailForm fields={contactFields} subject="Partnership Enquiry" intro="I would like to discuss a partnership." submitLabel="Send via Email" successText="Email app khul gaya hai — message send karke enquiry complete karein." />
             </div>
           </div>
         </section>
