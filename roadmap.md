@@ -13,5 +13,6 @@
 - [done] Add the homepage AI service recommender using Lovable AI Gateway.
 - [done] Add a shop-network advertising page using the supplied campaign reference images.
 - [done] Add individual India, Australia, USA, Canada, UAE, Singapore, UK and Europe market pages with dated source links.
+- [done] Build the dedicated USA-to-India FMCG market page with responsive trade imagery, product categories, support journey and official references.
 
 - [done] Imported task-completion-companion zip updates: Advertise Your Product page, Store List, per-market Global Presence pages, AI service recommender, 10-state store master, tests; advertising images saved locally as webp.
