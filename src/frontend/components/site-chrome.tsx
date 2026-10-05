@@ -71,17 +71,11 @@ export function SiteFooter() {
           <p className="mt-5 max-w-sm text-sm leading-7 text-ink-foreground/60">FMCG manufacturers ko retail networks, reliable partners aur global markets se jodne wala business growth platform.</p>
           <p className="mt-6 flex items-center gap-2 font-display text-[10px] font-semibold uppercase tracking-widest text-primary"><Globe2 className="size-4" /> Domestic · International</p>
         </div>
-        <div className="col-span-2 flex flex-col gap-10 md:col-span-1">
+        <div className="col-span-2 md:col-span-1">
           <nav aria-label="Company links">
             <h3 className="text-sm uppercase tracking-wider text-accent-foreground">Company</h3>
             <ul className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 text-sm text-ink-foreground/60 md:block md:space-y-3">
               {navLinks.map((link) => <li key={link.to}><Link to={link.to} className="transition-colors hover:text-primary">{link.label}</Link></li>)}
-            </ul>
-          </nav>
-          <nav aria-label="Global market links">
-            <h3 className="text-sm uppercase tracking-wider text-accent-foreground">Global Markets</h3>
-            <ul className="mt-5 grid grid-cols-3 gap-x-4 gap-y-3 text-sm text-ink-foreground/60 md:grid-cols-2">
-              {countries.map((country) => <li key={country.slug}><Link to="/global-presence/$market" params={{ market: country.slug }} className="transition-colors hover:text-primary">{country.name}</Link></li>)}
             </ul>
           </nav>
         </div>
@@ -98,11 +92,19 @@ export function SiteFooter() {
             <li><Link to="/payment" className="hover:text-primary">Payment Details</Link></li>
           </ul>
         </nav>
-        <div className="col-span-2 md:col-span-1">
-          <h3 className="text-sm uppercase tracking-wider text-accent-foreground">Contact</h3>
-          <ul className="mt-5 space-y-4 text-sm text-ink-foreground/60">
-            <li><a href={`mailto:${COMPANY.email}`} className="flex items-start gap-3 break-all hover:text-primary"><Mail className="mt-0.5 size-4 shrink-0 text-primary" />{COMPANY.email}</a></li>
-          </ul>
+        <div className="col-span-2 flex flex-col gap-10 md:col-span-1">
+          <div>
+            <h3 className="text-sm uppercase tracking-wider text-accent-foreground">Contact</h3>
+            <ul className="mt-5 space-y-4 text-sm text-ink-foreground/60">
+              <li><a href={`mailto:${COMPANY.email}`} className="flex items-start gap-3 break-all hover:text-primary"><Mail className="mt-0.5 size-4 shrink-0 text-primary" />{COMPANY.email}</a></li>
+            </ul>
+          </div>
+          <nav aria-label="Global market links">
+            <h3 className="text-sm uppercase tracking-wider text-accent-foreground">Global Markets</h3>
+            <ul className="mt-5 space-y-3 text-sm text-ink-foreground/60">
+              {countries.map((country) => <li key={country.slug}><Link to="/global-presence/$market" params={{ market: country.slug }} className="transition-colors hover:text-primary">{country.name}</Link></li>)}
+            </ul>
+          </nav>
         </div>
       </div>
       <div className="border-t border-border">

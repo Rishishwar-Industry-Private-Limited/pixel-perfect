@@ -14,7 +14,7 @@ import {
 export function UsaMarketPage() {
   return (
     <>
-      <section className="relative isolate min-h-[700px] overflow-hidden bg-ink text-ink-foreground sm:min-h-[740px] lg:min-h-[680px]">
+      <section className="relative isolate min-h-[548px] overflow-hidden bg-ink text-ink-foreground sm:min-h-[588px] lg:min-h-[528px]">
         <img
           src={usaHeroImage}
           alt="Trade route connecting the United States and India by air and sea"
@@ -23,20 +23,20 @@ export function UsaMarketPage() {
         />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,var(--ink)_0%,transparent_34%,var(--ink)_100%)] opacity-80 sm:hidden" />
         <div className="hero-overlay absolute inset-0 hidden sm:block" />
-        <div className="page-shell relative flex min-h-[700px] flex-col justify-between py-8 sm:min-h-[740px] sm:py-12 lg:min-h-[680px]">
+        <div className="page-shell relative flex min-h-[548px] flex-col justify-between py-6 sm:min-h-[588px] sm:py-8 lg:min-h-[528px]">
           <div>
             <Link to="/global-presence" className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-accent-foreground">
               <ArrowLeft className="size-4" /> Global Presence
             </Link>
-            <div className="mt-16 max-w-2xl sm:mt-20 lg:mt-24">
+            <div className="mt-8 max-w-2xl sm:mt-10 lg:mt-8">
               <p className="royal-label">USA to India · FMCG market entry</p>
-              <h1 className="mt-6 text-4xl leading-tight sm:text-6xl lg:text-7xl">
+              <h1 className="mt-4 text-4xl leading-tight sm:text-5xl lg:text-6xl">
                 Bring your USA FMCG product <span className="text-primary">to India.</span>
               </h1>
-              <p className="mt-6 max-w-xl text-base leading-7 text-ink-foreground/80 sm:text-lg sm:leading-8">
+              <p className="mt-4 max-w-xl text-base leading-7 text-ink-foreground/80 sm:text-lg sm:leading-8">
                 Plan your Indian market entry with practical support for product positioning, import preparation, distributor introductions and retail access.
               </p>
-              <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
+              <div className="mt-5 grid gap-3 sm:flex sm:flex-wrap">
                 <Button asChild size="lg" className="w-full sm:w-auto">
                   <a href="#usa-opportunity">Explore India opportunity <ArrowRight /></a>
                 </Button>
@@ -47,7 +47,7 @@ export function UsaMarketPage() {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-3 lg:max-w-4xl">
+          <div className="mt-6 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-3 lg:max-w-4xl">
             {usaSupportHighlights.map(({ icon: Icon, title, note }) => (
               <div key={title} className="flex min-w-0 items-start gap-4 bg-ink/90 p-4 backdrop-blur-md sm:p-5">
                 <Icon className="mt-0.5 size-6 shrink-0 text-primary" />
