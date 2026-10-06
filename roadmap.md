@@ -1,4 +1,6 @@
 # Roadmap
+- [open] Align five homepage capabilities in one desktop row; give About Mission/Vision proper sections and explain market problems solved.
+- [open] Add a client-facing RIPL chatbot with one conversation and browser-only history using current website information; verify live answers and reload history.
 
 - [done] Add shop advertising to Services; align footer partnership spacing and add eight market links; hide zero-store districts throughout retail browsing.
 - [done] Remove company phone number and address from all pages; keep email only as contact method (contact, footer, manufacturers, all enquiry forms now open email drafts).
