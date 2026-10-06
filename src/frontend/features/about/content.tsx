@@ -26,6 +26,18 @@ export const stats = [
   { icon: Globe, value: "8 Countries", label: "Global Presence" },
 ];
 
+export const purpose = [
+  { icon: Target, title: "Our Mission", text: "To empower FMCG manufacturers with strong market access, distribution networks and global opportunities for sustainable sales growth." },
+  { icon: Eye, title: "Our Vision", text: "To become the most trusted FMCG market expansion partner, connecting Indian and global manufacturers to every home, everywhere." },
+];
+
+export const marketProblems = [
+  { problem: "Good products. Limited shelf access.", detail: "Manufacturing a product does not automatically put it in front of customers.", response: "We connect brands with participating retail stores and identify suitable markets.", icon: Store },
+  { problem: "The wrong distribution fit.", detail: "Finding distributors and dealers who fit the product and territory can slow expansion.", response: "We help identify distribution partners and align the proposed commercial route.", icon: Users },
+  { problem: "Growth without a market plan.", detail: "Entering new regions needs more than dispatching stock; brands need a territory and channel strategy.", response: "We map domestic opportunities and support a structured market-by-market approach.", icon: MapPin },
+  { problem: "Uncertainty across borders.", detail: "International expansion brings market-entry, import preparation and distribution questions.", response: "We provide market-entry guidance and import/export support, with requirements reviewed for the target market.", icon: Globe },
+];
+
 export const services = [
   {
     icon: Store,
