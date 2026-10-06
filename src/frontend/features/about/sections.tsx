@@ -17,7 +17,7 @@ import aboutHero from "@/frontend/assets/about-hero.jpg";
 import officeImage from "@/frontend/assets/about-office.jpg";
 import handshakeImage from "@/frontend/assets/cta-handshake.jpg";
 
-import { stats, services, trustPoints, countries } from "./content";
+import { stats, services, trustPoints, countries, purpose, marketProblems } from "./content";
 import { districtFigure, totalStoreFigure } from "@/frontend/data/retail-network";
 
 export function AboutHero() {
@@ -59,42 +59,30 @@ export function AboutHero() {
 
 export function MissionVision() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-      <div className="grid gap-8 md:grid-cols-2 md:divide-x">
-        <div className="flex items-start gap-5 md:pr-10">
-          <span className="flex size-16 shrink-0 items-center justify-center rounded-full border-2 border-primary">
-            <Target className="size-8 text-primary" strokeWidth={1.8} />
-          </span>
-          <div>
-            <h2 className="text-2xl">Our Mission</h2>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              To empower FMCG manufacturers with strong market access,
-              distribution networks and global opportunities for sustainable
-              sales growth.
-            </p>
-          </div>
-        </div>
-        <div className="flex items-start gap-5 md:pl-10">
-          <span className="flex size-16 shrink-0 items-center justify-center rounded-full border-2 border-primary">
-            <Eye className="size-8 text-primary" strokeWidth={1.8} />
-          </span>
-          <div>
-            <h2 className="text-2xl">Our Vision</h2>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              To become the most trusted FMCG market expansion partner,
-              connecting Indian and global manufacturers to every home,
-              everywhere.
-            </p>
-          </div>
-        </div>
+    <section aria-label="Our mission and vision" className="border-b border-border bg-secondary/40">
+      <div className="page-shell grid divide-y divide-border md:grid-cols-2 md:divide-x md:divide-y-0">
+        {purpose.map(({icon: Icon, title, text}, index) => <div key={title} className="py-14 md:py-20 md:first:pr-12 md:last:pl-12">
+          <div className="flex items-center justify-between"><Icon className="size-9 text-primary" strokeWidth={1.5}/><span className="font-display text-sm text-muted-foreground">0{index + 1}</span></div>
+          <h2 className="mt-7 text-3xl sm:text-4xl">{title}</h2>
+          <div className="orange-rule mt-5"/>
+          <p className="mt-6 max-w-lg text-lg leading-8 text-muted-foreground">{text}</p>
+        </div>)}
       </div>
     </section>
   );
 }
 
+export function MarketChallenges() {
+  return <section className="cinematic-section bg-secondary/30" aria-labelledby="market-challenges-title"><div className="page-shell">
+    <p className="royal-label">The gap we bridge</p>
+    <div className="mt-6 grid gap-6 lg:grid-cols-2 lg:gap-16"><h2 id="market-challenges-title" className="text-3xl sm:text-5xl">From making a product<br/><span className="text-primary">to reaching its market.</span></h2><p className="max-w-xl text-lg leading-8 text-muted-foreground">Rishishwar Industry helps FMCG brands connect production with retail, distribution and new markets. We address the access and planning gaps that keep good products from reaching the right customers.</p></div>
+    <div className="mt-12 divide-y divide-border">{marketProblems.map(({problem, detail, response, icon: Icon}, i) => <div key={problem} className="grid gap-5 py-8 md:grid-cols-[48px_1fr_1fr] md:gap-8"><Icon className="size-8 text-primary" strokeWidth={1.5}/><div><p className="text-xs text-primary">0{i+1} / MARKET CHALLENGE</p><h3 className="mt-2 text-xl">{problem}</h3><p className="mt-3 leading-7 text-muted-foreground">{detail}</p></div><div><p className="text-xs font-semibold text-primary">OUR ROLE</p><p className="mt-3 leading-7">{response}</p></div></div>)}</div>
+  </div></section>;
+}
+
 export function Story() {
   return (
-    <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6">
+    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
       <div className="grid items-center gap-12 lg:grid-cols-2">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
